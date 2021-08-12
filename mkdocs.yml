@@ -1,0 +1,197 @@
+
+repo_name: area-shl
+repo_url: https://github.com/akharrou/area-shl/
+edit_uri: https://github.com/akharrou/area-shl/edit/master/%s
+view_uri: https://github.com/akharrou/area-shl/blob/master/%s
+remote_branch: gh-pages
+remote_name: origin
+
+site_name: 'Shellscript'
+site_description: 'Shellscript (shl) related notes.'
+site_url: https://akharrou.github.io/area/shl/
+
+site_dir: 'site'
+docs_dir: 'src'
+
+# -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+dev_addr: 127.0.0.1:8000
+strict: false
+
+theme:
+    name: material
+    locale: en
+    language: en
+    include_search_page: false
+    search_index_only: true
+    custom_dir: theme
+    features:
+        - navigation.tabs
+        - navigation.instant
+        - navigation.top
+        - header.autohide
+        - search.share
+        - search.suggest
+        # - search.highlight
+    palette:
+        - scheme: default
+          primary: black
+          accent: deep purple
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          primary: blue grey
+          accent: deep purple
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    font:
+      text: Roboto
+      code: Roboto Mono
+    favicon: material/book-open-page-variant
+    icon:
+      logo: material/book-open-page-variant
+      repo: fontawesome/brands/github
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/akharrou
+      name: Aymen on Github
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/akharrou/
+      name: Aymen on Linkedin
+
+markdown_extensions:
+    - toc:
+        toc_depth: 2
+        permalink: ⚓︎
+        slugify: !!python/name:pymdownx.slugs.uslugify
+    - abbr
+    - admonition
+    - footnotes
+    - def_list
+    - attr_list
+    - pymdownx.tabbed
+    - pymdownx.inlinehilite
+    - pymdownx.details
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
+    - pymdownx.superfences:
+        disable_indented_code_blocks: false
+        preserve_tabs: true
+        custom_fences:
+          - name: math
+            class: arithmatex
+            format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.highlight:
+        # linenums: false
+        linenums_style: pymdownx.inline
+        guess_lang: true
+        extend_pygments_lang:
+          - name: php-inline
+            lang: php
+            options:
+            startinline: true
+          - name: pycon3
+            lang: pycon
+            options:
+            python3: true
+    - pymdownx.critic:
+        mode: view
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret:
+        insert: true
+        superscript: true
+    - pymdownx.mark:
+        smart_mark: true
+    - pymdownx.tilde:
+        smart_delete: true
+        delete: true
+        subscript: true
+    - pymdownx.smartsymbols:
+        trademark: true
+        copyright: true
+        registered: true
+        care_of: true
+        plusminus: true
+        arrows: true
+        notequal: true
+        fractions: true
+        ordinal_numbers: true
+    - pymdownx.keys:
+        separator: '+'
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.snippets:
+        base_path: 'docs/'
+        encoding: utf-8
+        check_paths: true
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+        options:
+          custom_icons:
+            - theme/.icons
+    - pymdownx.progressbar:
+        level_class: true
+        progress_increment: 20
+        add_classes: ''
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/custom-admonitions.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+  - assets/javascript/config-mermaid.js
+
+plugins:
+    - search:
+        lang: en
+        separator: '[\s\-\.]+'
+        prebuild_index: true
+        indexing: 'sections' # [full|sections|titles]
+        prebuild_index: true
+        min_search_length: 3
+    - add-number:
+        increment_topnav: false
+        increment_pages: false
+        order: 2
+        strict_mode: false
+        excludes: null
+        includes: null
+    - minify:
+        minify_html: true
+        minify_js: true
+        htmlmin_opts:
+            remove_comments: true
+    - exclude:
+        glob:
+            - "*.tmp"
+            - "*.gz"
+            - "_*"
+            - "**/_*"
+        regex:
+            - '.*\.(tmp|bin|tar)$'
+    - redirects
+    - git-revision-date-localized:
+        type: timeago
+        time_zone: UTC
+        locale: en
+        fallback_to_build_date: true
+
+use_directory_urls: false

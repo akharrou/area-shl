@@ -17,12 +17,7 @@ tags: [get,print,display,change,formatted,datetime,time,string]
 
 ## USECASES
 ----
-#### To print current datetime, formatted: (see `Formatting Elements` below):
-
-    ❯ date +"%Y"   # print year
-    2021
-    ❯ date +%V   # Week-Of-The-Year
-    24
+#### To get/print/display current datetime formally formatted:
 
 
 ```bash
@@ -30,6 +25,7 @@ tags: [get,print,display,change,formatted,datetime,time,string]
 ❯ date +%s
 ```
 
+    1628849546
 
 
 ```bash
@@ -47,21 +43,17 @@ tags: [get,print,display,change,formatted,datetime,time,string]
 
     Sat, 10 Jul 2021 05:38:22 +0300
 
+Custom formats:
+
 
 ```bash
-#ℹ︎ get/print/display Apple`s long datetime
+#ℹ︎ get/print/display my-favorite-goto/Apple`s long datetime formatted string
 ❯ date +"%A, %B %d, %Y at %T %p GMT%Z"
 ```
 
     Thursday, June 09, 2021 at 11:29:04 AM GMT+03
-    Thursday, June 17, 2021 at 11:29:04 AM GMT+03
 
-
-```bash
-#ℹ︎ get/print/display file datetime prefix
-❯ date +"%Y%m%d_%H%M%S"
-```
-
+    ❯ date +"%Y%m%d_%H%M%S"
     20210617_112840
 
 ----

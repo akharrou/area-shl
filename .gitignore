@@ -1,5 +1,5 @@
 .draft*
 Makefile
 build.sh
-Pipfile
 venv/
+.DS_Store

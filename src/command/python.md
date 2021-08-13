@@ -1,5 +1,5 @@
 ---
-status: TODO
+status: INCOMPLETE
 title: "python"
 tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 ---
@@ -30,7 +30,7 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 ## RECIPIES
 
 ----
-#### To start an HTTP live server:
+#### Miscellaneous oneliners:
 
 
 ```bash
@@ -41,6 +41,14 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 
 See: https://docs.python.org/3/library/http.server.html
 Seealso: `livereload` command line program
+
+
+```bash
+#ℹ︎ generate/create/make get/print/display Universally/Globally Unique IDentifier (UUID/GUID)
+❯ python -c "import uuid; print(uuid.uuid4())"
+```
+
+    0abd96e5-1311-47ab-bf2b-204db2fe2c49
 
 
 ## INIT

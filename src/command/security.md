@@ -236,7 +236,7 @@ Alternatively, you can also let `security` prompt you interactively for the pass
 
 Path | Description
 - | -
-📂 `~/Library/Keychains/` | Directory containing keychain database files.
+`~/Library/Keychains/` | Directory containing keychain database files.
 
 ## SEE
 

@@ -43,8 +43,8 @@ tags: [output,play,audio,file,sound,music,tone,alert]
 
 Path | Description
 - | -
-📂 `/System/Library/Sound/` | Directory containing macOS system sound files.
-📂 `/System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds/` | Directory containing more macOS system sound files.
+`/System/Library/Sound/` | Directory containing macOS system sound files.
+`/System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds/` | Directory containing more macOS system sound files.
 
 ## SEE
 

@@ -247,8 +247,8 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/usr/share/zoneinfo/**/*` | Directory containing the available timezone information (required for displaying time for that timezone with `date`).
-📂 `/var/log/messages` | Record of the user setting the time.
+`/usr/share/zoneinfo/**/*` | Directory containing the available timezone information (required for displaying time for that timezone with `date`).
+`/var/log/messages` | Record of the user setting the time.
 
 ## SEE
 

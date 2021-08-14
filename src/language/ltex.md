@@ -68,7 +68,7 @@ Some packages cannot be installed via `tlmgr` (e.g. packages that aren’t part 
 
 Path | Description
 - | -
-📂 `$HOME/Library/texmf/tex/latex/local/` | Directory containing manual package installations (for MacOS).
+`$HOME/Library/texmf/tex/latex/local/` | Directory containing manual package installations (for MacOS).
 
 ## SEEALSO
 

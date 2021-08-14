@@ -33,8 +33,8 @@ tags: [get,print,display,user,terminal,device,file,name]
 
 Path | Description
 - | -
-📂 `/etc/ttys` | File containing information used by various routines to initialize and control the use of terminal special files.
-📂 `/dev/tty*` | Terminal device files.
+`/etc/ttys` | File containing information used by various routines to initialize and control the use of terminal special files.
+`/dev/tty*` | Terminal device files.
 
 ## SEE
 

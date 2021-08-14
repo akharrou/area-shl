@@ -72,7 +72,7 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `~/.config/iterm2` | Directory containing application configurations.
+`~/.config/iterm2` | Directory containing application configurations.
 
 ## BUGS
 

@@ -10,6 +10,17 @@ tags: [set,unset,print,zsh,keyboard,keys,bindings]
 
 Manage `zsh` shell keybindings.
 
+    ❯ bindkey [OPTIONS] -l [-L] [KEYMAP ...]
+    ❯ bindkey [OPTIONS] -d
+    ❯ bindkey [OPTIONS] -D KEYMAP ...
+    ❯ bindkey [OPTIONS] -A OLD-KEYMAP NEW-KEYMAP
+    ❯ bindkey [OPTIONS] -N NEW-KEYMAP [OLD-KEYMAP]
+    ❯ bindkey [OPTIONS] -m
+    ❯ bindkey [OPTIONS] -r IN-STRING ...
+    ❯ bindkey [OPTIONS] -s IN-STRING OUT-STRING ...
+    ❯ bindkey [OPTIONS] IN-STRING COMMAND ...
+    ❯ bindkey [OPTIONS] [IN-STRING]
+
 ## INSTALLATION
 
 

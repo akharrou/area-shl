@@ -122,8 +122,8 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `$(brew --prefix pyenv)/` | `pyenv` configuration directory.
-📂 `$PYENV_ROOT/` | Python versions and shims reside here.
+`$(brew --prefix pyenv)/` | `pyenv` configuration directory.
+`$PYENV_ROOT/` | Python versions and shims reside here.
 
 ## BUGS
 

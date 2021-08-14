@@ -54,6 +54,13 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
 
     plugins+=(fzf-tab)
 
+    zstyle ':completion:*' verbose yes
+    zstyle ':completion:*:descriptions' format '[%d]'
+    zstyle ':completion:*:messages' format '%d'
+    zstyle ':completion:*:warnings' format 'No matches for: %d'
+    zstyle ':completion:*' group-name
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
 ## VARIABLES
 
     FZF_TAB_GROUP_COLORS=(
@@ -80,9 +87,6 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
     zstyle ':fzf-tab:*' switch-group 'alt-"' "alt-'" # [,|.|'|/|...]
     zstyle ':fzf-tab:*' prefix '· '$'\033[37m' # item list prefix
 
-    zstyle ':completion:*:descriptions' format '[%d]' # group format
-    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
     zstyle ':fzf-tab:complete:*' fzf-flags \
         '--no-exact' \
         '-i' \
@@ -107,11 +111,17 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
         '--preview-window=right,50%,wrap,nofollow,cycle,hidden' \
 
 
+## NOTES
+
+You can include hidden files in completions with:
+
+    _comp_options+=(globdots)
+
 ## PATHS
 
 Path | Description
 - | -
-📂 `~/.oh-my-zsh/custom/plugins/fzf-tab` | Directory containing plugin.
+`~/.oh-my-zsh/custom/plugins/fzf-tab` | Directory containing plugin.
 
 ## SEEALSO
 

@@ -8,10 +8,10 @@ tags: [parser,processor,filter,reformatter,manipulate,json]
 
 ## BRIEF
 
-    ❯ jq [OPTIONS] FILTER [FILE ...]
-	❯ jq [OPTIONS] --args FILTER [STRINGS ...]
-	❯ jq [OPTIONS] --jsonargs FILTER [JSON ...]
-    ❯ jq [OPTIONS] --null-script --from-file FILE
+    ❯ jq [OPTIONS] JQSCRIPT [DATAFILE ...]
+	❯ jq [OPTIONS] --args JQSCRIPT [DATASTRINGS ...]
+	❯ jq [OPTIONS] --jsonargs JQSCRIPT [DATAJSON ...]
+    ❯ jq [OPTIONS] --null-script --from-file JQSCRIPTFILE
 
 Options (switches):
 

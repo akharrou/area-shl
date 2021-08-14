@@ -65,8 +65,8 @@ tags: [manipulate,power,battery,management,preferences,settings]
 
 Path | Description
 - | -
-📂 `/Library/Preferences/SystemConfiguration/com.apple.PowerManagement.plist` | Per-system (not per-user) persistent preferences file containing changes made through `pmset`.
-📂 `/Library/Preferences/SystemConfiguration/com.apple.AutoWake.plist` | Per-system (not per-user) persistent preferences file containing scheduled power on/off events.
+`/Library/Preferences/SystemConfiguration/com.apple.PowerManagement.plist` | Per-system (not per-user) persistent preferences file containing changes made through `pmset`.
+`/Library/Preferences/SystemConfiguration/com.apple.AutoWake.plist` | Per-system (not per-user) persistent preferences file containing scheduled power on/off events.
 
 ## SEE
 

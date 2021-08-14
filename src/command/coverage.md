@@ -74,10 +74,10 @@ To configure `coverage`, you can either create a `.coveragerc` file, which shoul
 
 Path | Description
 - | -
-📂 `.coveragerc` | Configure file.
-📂 `setup.cfg` | Configure file.
-📂 `tox.ini` | Configure file.
-📂 `pyproject.toml` | Configure file.
+`.coveragerc` | Configure file.
+`setup.cfg` | Configure file.
+`tox.ini` | Configure file.
+`pyproject.toml` | Configure file.
 
 ## SEE
 

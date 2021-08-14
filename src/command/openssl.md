@@ -18,11 +18,11 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 ## USECASES
 
 ----
-#### To compute SHA-2 (224, 384, 256, 512 bit) crypotgraphic digests:
+#### To compute SHA-2 (224, 384, 256, 512 bit) crypotgraphic digests/hashes:
 
 
 ```bash
-#ℹ︎ compute sha256 digest of standard input string, and get/print/display/return it
+#ℹ︎ get/print/display/return/compute sha256 digest/hash of standard input string
 ❯ echo -n "Hello world" | openssl sha256
 ```
 
@@ -30,7 +30,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 
 
 ```bash
-#ℹ︎ compute sha256 digest of standard input string, and get/print/display/return it
+#ℹ︎ get/print/display/return/compute sha256 digest/hash of standard input string
 ❯ openssl sha256 <<< "Hello world"
 ```
 
@@ -38,7 +38,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 
 
 ```bash
-#ℹ︎ compute sha256 digest of file, and get/print/display/return it
+#ℹ︎ get/print/display/return/compute sha256 digest/hash of file
 ❯ openssl sha256 <(echo -n "Hello world")
 ```
 
@@ -46,7 +46,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 
 
 ```bash
-#ℹ︎ compute sha256 digest of file, and get/print/display/return it
+#ℹ︎ get/print/display/return/compute sha256 digest/hash of file
 ❯ openssl sha224 FILE
 ```
 
@@ -145,8 +145,8 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 ❯ openssl pkeyutl \
 	-encrypt \
 	-pubin -inkey pubkey-RECEIVER.pem \
-	-in MESSAGE \
-	-out enc-MESSAGE.bin
+	-in MESSAGE.txt \
+	-out MESSAGE.txt.enc
 ```
 
 
@@ -156,7 +156,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 ❯ openssl dgst -sha512 \
 	-sign privkey-SENDER.pem \
 	-out signature.bin \
-	MESSAGE
+	MESSAGE.txt
 ```
 
 
@@ -166,8 +166,8 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 ❯ openssl pkeyutl \
 	-decrypt \
 	-inkey privkey-RECEIVER.pem \
-	-in enc-MESSAGE.bin \
-	-out dec-MESSAGE
+	-in MESSAGE.txt.enc \
+	-out MESSAGE.txt.dec
 ```
 
 
@@ -177,7 +177,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 ❯ openssl dgst -sha512 \
 	-verify pubkey-SENDER.pem \
 	-signature signature.bin \
-	dec-MESSAGE
+	MESSAGE.txt.dec
 ```
 
 
@@ -221,20 +221,20 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
         ❯ openssl pkeyutl \
             -encrypt \
             -pubin -inkey pubkey-B.pem \
-            -in message.txt \
-            -out enc-message.bin
+            -in MESSAGE.txt \
+            -out MESSAGE.txt.enc
 
-    Generates the encrypted message `enc-message.bin`. On the receiving end, `USER-B`, and only `USER-B`, will be able to decrypt the message, using their private key.
+    Generates the encrypted message `MESSAGE.txt.enc`. On the receiving end, `USER-B`, and only `USER-B`, will be able to decrypt the message, using their private key.
 
     Before encryption:
 
-        ❯ hexdump -C message.txt
+        ❯ hexdump -C MESSAGE.txt
         54 68 69 73 20 69 73 20  61 6e 20 65 78 61 6d 70 |This is an examp|
         6c 65 20 6d 65 73 73 61  67 65 2e 0a             |le message..|
 
     After encryption:
 
-        ❯ hexdump -C enc-message.bin
+        ❯ hexdump -C MESSAGE.txt.enc
         8a 52 ce f2 ed fc 25 42  89 e6 3d e3 68 dc 2e ca |.R....%B..=.h...|
         fb e0 d8 20 14 95 f3 77  74 01 b8 f5 d8 0a 86 6e |... ...wt......n|
         d1 a2 fd 81 78 d8 13 f4  df 77 47 bf 96 6e 13 34 |....x....wG..n.4|
@@ -259,7 +259,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
         ❯ openssl dgst -sha512 \
             -sign privkey-A.pem \
             -out signature.bin \
-            message.txt
+            MESSAGE.txt
 
     This will do both in a single command. Generates `signature.bin` file, which will be sent to `USER-B`, so that they may verify that the encrypted message came from `USER-A`.
 
@@ -270,13 +270,13 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
         ❯ openssl pkeyutl \
             -decrypt \
             -inkey privkey-B.pem \
-            -in enc-message.bin \
-            -out dec-message.txt
+            -in MESSAGE.txt.enc \
+            -out MESSAGE.txt.dec
 
-    Generates `dec-message.txt`.
+    Generates `MESSAGE.txt.dec`.
 
-        ❯ diff dec-message.txt message.txt
-        ❯ hexdump -C dec-message.txt
+        ❯ diff MESSAGE.txt.dec MESSAGE.txt
+        ❯ hexdump -C dec-MESSAGE.txt
         54 68 69 73 20 69 73 20  61 6e 20 65 78 61 6d 70  |This is an examp|
         6c 65 20 6d 65 73 73 61  67 65 2e 0a              |le message..|
 
@@ -287,7 +287,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
         ❯ openssl dgst -sha512 \
             -verify pubkey-A.pem \
             -signature signature.bin \
-            dec-message.txt
+            MESSAGE.txt.dec
         Verified OK
 
     No one can pretend to be `USER-A` because, they don’t have the private key of `USER-A`, which is required to encrypt the message along side the hash.
@@ -332,11 +332,11 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/etc/ssl/` | Default config directory for openssl.
-📂 `/etc/ssl/lib/` | Unused.
-📂 `/etc/ssl/private/` | Default private key directory.
-📂 `/etc/ssl/openssl.cnf` | Default configuration file for openssl.
-📂 `/etc/ssl/x509v3.cnf` | Default configuration file for x509 certificates.
+`/etc/ssl/` | Default config directory for openssl.
+`/etc/ssl/lib/` | Unused.
+`/etc/ssl/private/` | Default private key directory.
+`/etc/ssl/openssl.cnf` | Default configuration file for openssl.
+`/etc/ssl/x509v3.cnf` | Default configuration file for x509 certificates.
 
 ## SEE
 

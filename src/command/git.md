@@ -443,11 +443,11 @@ Revisions can also be identified with `:/text`. E.g., this will show the first c
 
 Path | Description
 - | -
-📂 `$(prefix)/etc/gitconfig` | System-wide configuration file.
-📂 `$XDG_CONFIG_HOME/git/config` | Second user-specific configuration file; defaults to: `$HOME/.config/git/config`.
-📂 `~/.gitconfig` | Global user-specific configuration file.
-📂 `$GIT_DIR/config` | Repository specific configuration file.
-📂 `$GIT_DIR/config.worktree` | Optional, only searched when `extensions.worktreeConfig` is present in `$GIT_DIR/config`.
+`$(prefix)/etc/gitconfig` | System-wide configuration file.
+`$XDG_CONFIG_HOME/git/config` | Second user-specific configuration file; defaults to: `$HOME/.config/git/config`.
+`~/.gitconfig` | Global user-specific configuration file.
+`$GIT_DIR/config` | Repository specific configuration file.
+`$GIT_DIR/config.worktree` | Optional, only searched when `extensions.worktreeConfig` is present in `$GIT_DIR/config`.
 
 ## SEE
 

@@ -114,6 +114,23 @@ tags: [save,capture,screen,window,monitor,rectangle,frame,area,screenshots,photo
 
     ❯ screencapture -t jpg -i `mktemp -u $TMPDIR/screencapture.png.XXXXXX`   # screenshot capture interactively selected area, save to temporary file
 
+----
+#### To get/set/modify/change macos `screencapture` settings:
+
+
+```bash
+#ℹ︎ set/modify/change macos screencapture images output format (default: `png`)
+❯ defaults write com.apple.screencapture type -string [jpg|png|tiff|pdf|...]
+```
+
+
+
+```bash
+#ℹ︎ change default destination location path of macos screencapture images output
+❯ defaults write com.apple.screencapture location PATH
+```
+
+
 
 ## NOTES
 

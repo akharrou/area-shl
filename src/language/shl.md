@@ -106,17 +106,104 @@ tags: [shellscript,terminal,command,line,prompt,scripting,language]
 
 ## NOTES
 
-1. Relational operators
-2. Boolean operators
-3. Arithmetic operators
-4. Bitwise operators
-5. String operators
-6. File Test operators
-7. Control operators
-8. Redirection operators
-9. Substitution operators
+1. Types
+2. Relational operators
+3. Boolean operators
+4. Arithmetic operators
+5. Bitwise operators
+6. String operators
+7. File Test operators
+8. Control operators
+9. Redirection operators
+10. Substitution operators
 
----
+### Types
+
+- **Integers**
+
+    ```bash
+    ❯ declare -i age=23.2
+    ❯ echo $age
+    ❯ 23
+    ```
+
+- **Floats**
+
+    ```bash
+    ❯ declare -F age=23.2
+    ❯ echo $age
+    23.2000000000
+    ```
+    ```bash
+    ❯ declare -E age=23.2
+    ❯ echo $age
+    2.320000000e+01
+    ```
+
+- **Strings**
+
+    ```bash
+    ❯ declare name="John Doe"
+    ❯ echo $name
+    John Doe
+    ```
+
+- **Arrays**
+
+    ```bash
+    ❯ declare nums=(0 1 2 3 4 5)
+    ❯ echo ${#num}
+    6
+    ❯ echo ${nums[1]} && echo ${nums[1,2]} && echo ${nums[3,-1]}
+    0
+    0 1
+    2 3 4 5
+    ❯ echo ${nums[*]}
+    0 1 2 3 4 5
+    ❯ echo ${nums[*]:2}
+    2 3 4 5
+    ❯ echo ${nums[*]:2:2}
+    2 3
+    ```
+    ```bash
+    ❯ declare team=(john "steve jobs" tim laura becka)
+    ❯ echo ${team[2]} && echo ${team[4]}
+    steve jobs
+    laura
+    ❯ echo ${#team}
+    5
+    ❯ echo $team || echo ${team[@]} || echo ${team[*]}
+    john steve jobs tim laura becka
+    ❯ for person in $team; do echo $person; done
+    john
+    steve jobs
+    tim
+    laura
+    becka
+    ```
+
+- **Associative Arrays** *(a.k.a maps, hashtables, hashmaps, dictionnaries)*
+
+    ```bash
+    ❯ declare -A menu
+    ❯ menu[breakfast]="coffee with eggs"
+    ❯ menu[dinner]="lasagna"
+    ❯ menu[supper]="caesar salad"
+    ❯ echo ${menu[dinner]}
+    lasagna
+    ❯ echo ${menu[*]}
+    lasagna coffee with eggs caesar salad eggs
+    ❯ echo ${#menu[*]}
+    4
+    ❯ for item in ${menu[*]}; do echo $item; done
+    lasagna
+    coffee with eggs
+    caesar salad
+    eggs
+    ```
+
+>- There is no notion of order in an associative array.
+>- `bash` does have Boolean expressions in terms of comparison and conditions. That said, what you can declare and compare in `bash` are strings and numbers. That’s it. Wherever you see `true` or `false` in `bash`, it’s either a string or a command/builtin which is only used for its exit code.
 
 ### Relational operators
 
@@ -785,12 +872,15 @@ References:
 | `${@:position:length}`        | List of positional argument elements, starting from offset position`$position`, and stopping at `$length` (inclusive) ^[2]
 | `${array[@]} `                | List of `$array` elements
 | `${#array[@]} `               | Length of `$array` list
-| `${array[N]} `                | `$array` argument at index `N` ^[2]
+| `${array[N]} `                | `$array` argument at index `N` ^[2], ^[3], ^[4], ^[5]
+| `${array[N,M]} `              | `$array` arguments from index `N` to `M` ^[3]
 | `${array[@]:position}`        | List of `$array` elements, starting from `$position` (inclusive) ^[2]
 | `${array[@]:position:length}` | List of `$array` elements, starting from `$position`, and stopping at `$length` (inclusive) ^[2]
 
     [1]: test for both parameter’s existence, and that its value is not null
     [2]: negative offset values start at the end of the list. they should be given one space seperation from colon
+    [3]: arrays are not zero-indexed, but one-indexed, i.e they start counting at 1
+    [4]: regarding associative arrays, `N` is a string
 
 | Expression                         | Meaning
 | ---------------------------------- | -------
@@ -1078,7 +1168,7 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/etc/shells` | system valid login shells
+`/etc/shells` | system valid login shells
 
 ## SEEALSO
 

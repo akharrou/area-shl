@@ -32,8 +32,8 @@ tags: [simple,text,editor]
 
 Path | Description
 - | -
-📂 `/etc/nanorc` | Initialization file (1).
-📂 `~/.nanorc.` | Initialization file (2).
+`/etc/nanorc` | Initialization file (1).
+`~/.nanorc.` | Initialization file (2).
 
 ## SEE
 

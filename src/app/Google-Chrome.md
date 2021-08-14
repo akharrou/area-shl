@@ -62,8 +62,8 @@ Key | Action
 
 Path | Description
 - | -
-📂 `/Applications/Google Chrome.app` | Application’s bundle folder.
-📂 `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome` | Application’s executable program file.
+`/Applications/Google Chrome.app` | Application’s bundle folder.
+`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome` | Application’s executable program file.
 
 ## SEEALSO
 

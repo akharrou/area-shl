@@ -60,7 +60,7 @@ Project layout:
 
 Path | Description
 - | -
-📂 `PROJECTROOT/mkdocs.yml` | Per project directory configuration file.
+`PROJECTROOT/mkdocs.yml` | Per project directory configuration file.
 
 ## SEE
 

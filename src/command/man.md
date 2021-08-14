@@ -72,9 +72,9 @@ Formats and displays manual pages.
 
 Path | Description
 - | -
-📂 `/etc/manpaths, /etc/manpaths.d/` | Manual pages path configuration file/directory. This file, and the files in the `.d/` directory, are sourced during the initialization process of login shells.
-📂 `/usr/share/man/, /usr/local/man/` | Directory containing system’s manual pages.
-📂 `/usr/local/share/man/` | Directory containg manual pages of unbundled software.
+`/etc/manpaths, /etc/manpaths.d/` | Manual pages path configuration file/directory. This file, and the files in the `.d/` directory, are sourced during the initialization process of login shells.
+`/usr/share/man/, /usr/local/man/` | Directory containing system’s manual pages.
+`/usr/local/share/man/` | Directory containg manual pages of unbundled software.
 
 ## SEE
 

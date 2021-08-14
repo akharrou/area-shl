@@ -58,8 +58,8 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/usr/share/file/magic.mgc` | Default compiled list of magic.
-📂 `/usr/share/file/magic` | Directory containing default magic files.
+`/usr/share/file/magic.mgc` | Default compiled list of magic.
+`/usr/share/file/magic` | Directory containing default magic files.
 
 ## SEE
 

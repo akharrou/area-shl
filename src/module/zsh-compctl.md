@@ -1,10 +1,17 @@
 ---
-status: TODO
+status: INCOMPLETE
 title: "zsh/compctl"
 tags: [zsh,zshell,shell,extension,module,completion]
 ---
 
 # `zsh/compctl`
+
+## BRIEF
+
+Defines:
+
+- `compctl` used for the old, deprecated way of control completions for ZLE
+- `compcall` used in [user-defined completion widgets](https://zsh.sourceforge.io/Doc/Release/Completion-Widgets.html#Completion-Widgets)
 
 ## INSTALLATION
 

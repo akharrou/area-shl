@@ -46,8 +46,8 @@ See `netintro(4)`.
 
 Path | Description
 - | -
-📂 `/etc/protocols` | internet protocols
-📂 `/etc/networks` | networks database
+`/etc/protocols` | internet protocols
+`/etc/networks` | networks database
 
 ## SEE
 

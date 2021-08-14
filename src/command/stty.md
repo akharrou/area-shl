@@ -76,7 +76,7 @@ Changes to terminal settings are not persistant. Add them to shell initializatio
 
 Path | Description
 - | -
-📂 `/etc/ttys` | File containing information used by various routines to initialize and control the use of terminal special files.
+`/etc/ttys` | File containing information used by various routines to initialize and control the use of terminal special files.
 
 ## SEE
 

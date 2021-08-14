@@ -830,11 +830,11 @@ To specify `Brewfile` path, either: set `HOMEBREW_BUNDLE_FILE` with specified lo
 
 Path | Description
 - | -
-📂 `/usr/local/Homebrew/` | Homebrew git repository.
-📂 `/usr/local/Homebrew/Library/Homebrew/` | Homebrew standard implementation scripts.
-📂 `/usr/local/Homebrew/Library/Taps/` | Homebrew extention implementation scripts.
-📂 `/usr/local/Caskroom/` | Directory containing (versioned) installations of casks (native applications).
-📂 `/usr/local/Cellar/` | Directory containing (versioned) installations of formulae (command-line programs).
+`/usr/local/Homebrew/` | Homebrew git repository.
+`/usr/local/Homebrew/Library/Homebrew/` | Homebrew standard implementation scripts.
+`/usr/local/Homebrew/Library/Taps/` | Homebrew extention implementation scripts.
+`/usr/local/Caskroom/` | Directory containing (versioned) installations of casks (native applications).
+`/usr/local/Cellar/` | Directory containing (versioned) installations of formulae (command-line programs).
 
 ## SEE
 

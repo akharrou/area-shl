@@ -15,10 +15,10 @@ The Portable Operating System Interface (POSIX) is a family of standards specifi
 
 Path | Description
 - | -
-📂 `~/.environment` | Login shell initialization file.
-📂 `~/.profile` | Login shell initialization file.
-📂 `~/.login` | Login shell initialization file.
-📂 `~/.logout` | Login shell initialization file.
+`~/.environment` | Login shell initialization file.
+`~/.profile` | Login shell initialization file.
+`~/.login` | Login shell initialization file.
+`~/.logout` | Login shell initialization file.
 
 ## SEEFURTHER
 

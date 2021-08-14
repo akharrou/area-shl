@@ -124,7 +124,7 @@ Navigate your filesystem, faster. Maintains a database of the directories you us
 
 Path | Description
 - | -
-📂 `$HOME/Library/autojump/autojump.txt` | Database file.
+`$HOME/Library/autojump/autojump.txt` | Database file.
 
 ## SEE
 

@@ -47,8 +47,8 @@ Sound eXchange (SoX), the "Swiss Army knife" of audio manipulation. Consists of 
 
 Path | Description
 - | -
-📂 `/System/Library/Sound/` | Directory containing macOS system sound files.
-📂 `/System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds/` | Directory containing more macOS system sound files.
+`/System/Library/Sound/` | Directory containing macOS system sound files.
+`/System/Library/PrivateFrameworks/ScreenReader.framework/Versions/A/Resources/Sounds/` | Directory containing more macOS system sound files.
 
 ## SEE
 

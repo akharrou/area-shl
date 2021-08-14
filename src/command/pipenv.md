@@ -235,7 +235,7 @@ All package [un]installations can be done from outside the virtualenv, or from w
 
 Path | Description
 - | -
-📂 `$HOME/.local/share/virtualenvs/` | Default directory that stores virtual environment.
+`$HOME/.local/share/virtualenvs/` | Default directory that stores virtual environment.
 
 ## SEE
 

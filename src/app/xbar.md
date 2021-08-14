@@ -34,7 +34,7 @@ tags: [menubar,status,bar,display,show,print,script,output]
 
 Path | Description
 - | -
-📂 `~/Library/Application Support/xbar/plugins` | Directory containg installed plugins.
+`~/Library/Application Support/xbar/plugins` | Directory containg installed plugins.
 
 ## SEEALSO
 

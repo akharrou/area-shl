@@ -33,13 +33,13 @@ tags: [login,into,computer,system]
 
 Path | Description
 - | -
-📂 `/etc/motd` | Message-of-the-day.
-📂 `/etc/nologin` | Disallows logins.
-📂 `/var/run/utmpx` | Current logins.
-📂 `/var/mail/user` | System mailboxes.
-📂 `.hushlogin` | Makes login quieter.
-📂 `/etc/security/audit_user` | User flags for auditing.
-📂 `/etc/security/audit_control` | Global flags for auditing.
+`/etc/motd` | Message-of-the-day.
+`/etc/nologin` | Disallows logins.
+`/var/run/utmpx` | Current logins.
+`/var/mail/user` | System mailboxes.
+`.hushlogin` | Makes login quieter.
+`/etc/security/audit_user` | User flags for auditing.
+`/etc/security/audit_control` | Global flags for auditing.
 
 ## SEE
 

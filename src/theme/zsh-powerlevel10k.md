@@ -33,7 +33,7 @@ tags: [zsh,zshell,shell,theme,prompt,powerlevel10k]
 
 Path | Description
 - | -
-📂 `$ZSH_CUSTOM/themes/powerlevel10k` | Directory containing theme.
+`$ZSH_CUSTOM/themes/powerlevel10k` | Directory containing theme.
 
 ## SEEALSO
 

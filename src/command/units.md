@@ -34,7 +34,7 @@ tags: [convert,units,scale]
 
 Path | Description
 - | -
-📂 `/usr/share/misc/units.lib` | Standard units library.
+`/usr/share/misc/units.lib` | Standard units library.
 
 ## SEE
 

@@ -42,7 +42,7 @@ Terminal emulator program.
 
 Path | Description
 - | -
-📂 `~/.config/kitty/kitty.conf` | Terminal configuration file.
+`~/.config/kitty/kitty.conf` | Terminal configuration file.
 
 ## SEEALSO
 

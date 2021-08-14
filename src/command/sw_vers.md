@@ -59,8 +59,8 @@ tags: [print,macos,operating,system,version,information]
 
 Path | Description
 - | -
-📂 `/System/Library/CoreServices/SystemVersion.plist` | System Version information.
-📂 `/System/Library/CoreServices/ServerVersion.plist` | Server Version information.
+`/System/Library/CoreServices/SystemVersion.plist` | System Version information.
+`/System/Library/CoreServices/ServerVersion.plist` | Server Version information.
 
 ## SEE
 

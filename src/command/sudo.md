@@ -64,8 +64,8 @@ tags: [do,run,execute,command,as,another,user,privilege,super]
 
 Path | Description
 - | -
-📂 `/etc/sudoers` | Sudoers file.
-📂 `/etc/sudo.conf` | File containing `sudo` configurations. Stores path to `askpass` helper program.
+`/etc/sudoers` | Sudoers file.
+`/etc/sudo.conf` | File containing `sudo` configurations. Stores path to `askpass` helper program.
 
 ## SEE
 

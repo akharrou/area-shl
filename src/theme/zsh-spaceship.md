@@ -70,7 +70,7 @@ tags: [zsh,zshell,shell,theme,prompt,spaceship]
 
 Path | Description
 - | -
-📂 `$ZSH_CUSTOM/themes/spaceship-prompt` | Directory containg theme.
+`$ZSH_CUSTOM/themes/spaceship-prompt` | Directory containg theme.
 
 ## SEEALSO
 

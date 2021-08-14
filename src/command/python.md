@@ -30,7 +30,7 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 ## RECIPIES
 
 ----
-#### Miscellaneous oneliners:
+#### Miscellaneous useful one-liners:
 
 
 ```bash
@@ -39,8 +39,7 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 ```
 
 
-See: https://docs.python.org/3/library/http.server.html
-Seealso: `livereload` command line program
+>- See [http.server](https://docs.python.org/3/library/http.server.html) for documentation, and [`livereload`](http://livereload.com/) command line program as alternative.
 
 
 ```bash
@@ -49,6 +48,20 @@ Seealso: `livereload` command line program
 ```
 
     0abd96e5-1311-47ab-bf2b-204db2fe2c49
+
+
+```bash
+#ℹ︎ convert/transform json data file/standard-input, into yaml
+❯ python -c "import sys, yaml, json; print(json.dumps(yaml.safe_load(sys.stdin.read())))"
+```
+
+
+
+```bash
+#ℹ︎ create/make socket link file
+❯ python -c ’import socket as s; sock = s.socket(s.AF_UNIX); sock.bind("/tmp/test.sock")’
+```
+
 
 
 ## INIT
@@ -95,8 +108,8 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/usr/local/opt/python@3.9/libexec/bin/` | Directory in which unversioned symlinks `python`, `python-config`, `pip` etc. pointing to `python3`, `python3-config`, `pip3` etc, have been installed into.
-📂 `/usr/local/lib/python3.9/site-packages/` | Directory containing `pip` installed packages.
+`/usr/local/opt/python@3.9/libexec/bin/` | Directory in which unversioned symlinks `python`, `python-config`, `pip` etc. pointing to `python3`, `python3-config`, `pip3` etc, have been installed into.
+`/usr/local/lib/python3.9/site-packages/` | Directory containing `pip` installed packages.
 
 ## SEE
 

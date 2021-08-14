@@ -52,11 +52,11 @@ tags: [check,test,internet,input,output,download,upload,inbound,outbound,speed,t
 
 Path | Description
 - | -
-📂 `/etc/ssl/certs/ca-certificates.crt` | ?
-📂 `/etc/pki/tls/certs/ca-bundle.crt` | ?
-📂 `/usr/share/ssl/certs/ca-bundle.crt` | ?
-📂 `/usr/local/share/certs/ca-root-nss.crt` | ?
-📂 `/etc/ssl/cert.pem` | Certificate files checked.
+`/etc/ssl/certs/ca-certificates.crt` | ?
+`/etc/pki/tls/certs/ca-bundle.crt` | ?
+`/usr/share/ssl/certs/ca-bundle.crt` | ?
+`/usr/local/share/certs/ca-root-nss.crt` | ?
+`/etc/ssl/cert.pem` | Certificate files checked.
 
 ## SEE
 

@@ -38,6 +38,18 @@ tags: [pipe,fitting,forwarding,redirect,output,multiple,to,files]
 
     "hello"
 
+## RECIPES
+
+----
+#### To print/write output to files, and to standard-output if DEBUG flag is set on:
+
+
+```bash
+#ℹ︎ print/write output to file, and to standard-output if DEBUG flag is set on
+❯ if [[ $DEBUG ]]; then tee FILE else 1>FILE fi
+```
+
+
 
 ## SEE
 

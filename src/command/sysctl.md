@@ -91,7 +91,7 @@ tags: [manage,control,get,set,system,kernel,state,information]
 
 Path | Description
 - | -
-📂 `/etc/sysctl.conf` | Kernel state defaults.
+`/etc/sysctl.conf` | Kernel state defaults.
 
 ## SEE
 

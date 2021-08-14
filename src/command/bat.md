@@ -161,9 +161,9 @@ In the `bat` window, you might see: `~`, `-`, and `+` symbols, in the gutter. Th
 
 Path | Description
 - | -
-📂 `~/.config/bat/config` | Configuration file.
-📂 `~/.config/bat/themes` | External themes.
-📂 `~/.cache/bat` | Cache.
+`~/.config/bat/config` | Configuration file.
+`~/.config/bat/themes` | External themes.
+`~/.cache/bat` | Cache.
 
 ## SEE
 

@@ -113,10 +113,10 @@ The following variables can be set in the `crontab` file:
 
 Path | Description
 - | -
-📂 `/usr/lib/cron/tabs/` | Directory containing personal crontab files.
-📂 `/usr/lib/cron/tabs/$USER` | File containing user crontab, i.e table of jobs to run recurringly.
-📂 `/usr/lib/cron/cron.allow` | File containing list of newline separated users who are allowed usage of crontabs.
-📂 `/usr/lib/cron/cron.deny` | File containing list of newline separated users who are denied usage of crontabs.
+`/usr/lib/cron/tabs/` | Directory containing personal crontab files.
+`/usr/lib/cron/tabs/$USER` | File containing user crontab, i.e table of jobs to run recurringly.
+`/usr/lib/cron/cron.allow` | File containing list of newline separated users who are allowed usage of crontabs.
+`/usr/lib/cron/cron.deny` | File containing list of newline separated users who are denied usage of crontabs.
 
 ## SEE
 

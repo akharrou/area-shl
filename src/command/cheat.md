@@ -56,7 +56,7 @@ Create, collect, view interactive cheatsheets on the command line. It was design
 
 Path | Description
 - | -
-📂 `~/.config/cheat/cheatsheets/personal` | Personal cheatsheet files location.
+`~/.config/cheat/cheatsheets/personal` | Personal cheatsheet files location.
 
 ## SEE
 

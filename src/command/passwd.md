@@ -32,9 +32,9 @@ tags: [modify,change,user,login,passwords,passphrase,passcode]
 
 Path | Description
 - | -
-📂 `/etc/master.passwd` | The user database.
-📂 `/etc/passwd` | A Version 7 format password file.
-📂 `/etc/passwd.XXXXXX` | Temporary copy of the password file.
+`/etc/master.passwd` | The user database.
+`/etc/passwd` | A Version 7 format password file.
+`/etc/passwd.XXXXXX` | Temporary copy of the password file.
 
 ## SEE
 

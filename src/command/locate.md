@@ -67,9 +67,9 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/var/db/locate.database` | Locate database.
-📂 `/usr/libexec/locate.updatedb` | Script to update the locate database.
-📂 `/System/Library/LaunchDaemons/com.apple.locate.plist` | Job that starts the database rebuild.
+`/var/db/locate.database` | Locate database.
+`/usr/libexec/locate.updatedb` | Script to update the locate database.
+`/System/Library/LaunchDaemons/com.apple.locate.plist` | Job that starts the database rebuild.
 
 ## SEE
 

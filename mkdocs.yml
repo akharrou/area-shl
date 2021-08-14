@@ -1,8 +1,8 @@
 
 repo_name: area-shl
 repo_url: https://github.com/akharrou/area-shl/
-edit_uri: https://github.com/akharrou/area-shl/edit/master/%s
-view_uri: https://github.com/akharrou/area-shl/blob/master/%s
+edit_uri: https://github.com/akharrou/area-shl/edit/main/src/%s
+view_uri: https://github.com/akharrou/area-shl/blob/main/src/%s
 remote_branch: gh-pages
 remote_name: origin
 

@@ -1,4 +1,4 @@
-+---
+---
 status: INCOMPLETE
 title: "stat"
 tags: [get,print,display,files,folders,status,information]
@@ -126,24 +126,26 @@ tags: [get,print,display,files,folders,status,information]
 
     Char | Information
     - | -
-    `%a` | last access datetime
+    **Datetime** ||
+    `%a` | last access datetime (of file)
     `%Sa` | time displayed with `strftime`, based on `-t` option value
-    `%m` | last modification datetime
+    `%m` | last modification datetime (of file content)
     `%Sm` | time displayed with `strftime`, based on `-t` option value
-    `%c` | last change datetime
+    `%c` | last change datetime (of file metadata)
     `%Sc` | time displayed with `strftime`, based on `-t` option value
-    `%B` | birth/creation datetime
+    `%B` | birth/creation datetime (of file inode)
     `%SB` | time displayed with `strftime`, based on `-t` option value
-    – | –
+    **Device** ||
     `%d` | device name upon which file resides (`76252221`,`76252228`,...)
     `%r` | device number (for character & block device special files) (`7625227`,`7625219`,`7625216`,...)
+    **Links** ||
     `%l` | number of hard links
-    – | –
+    **User & Group** ||
     `%u` | user ID of file’s owner (`501`)
     `%Su` | user name of file’s owner (`johndoe`)
     `%g` | group ID of file’s owner (`20`)
     `%Sg` | group name of file’s owner (`staff`)
-    – | –
+    **Permissions Mode** ||
     `%p` | full file mode bits value (`100721`)
     `%Sp` | full file mode bits string (`-rwx-w---x`)
     `%Hp` | user file mode bits value (`8`)
@@ -152,22 +154,19 @@ tags: [get,print,display,files,folders,status,information]
     `%SMp` | groups file mode bits string (`-w-`)
     `%Lp` | others file mode bits value (`721`)
     `%SLp` | others file mode bits string (`--x`)
-    – | –
+    **File/Symlink Name** ||
     `%N` | file name
     `%Y` | target of a symbolic link `<symlink-target-filename>`
     `%SY` | insert "` -> `" before target file name; ` -> <symlink-target-filename>`
     `%N%SY` | `<symlink-filename>  ->  <symlink target filename>`
-    – | –
+    **Filename** ||
     `%z` | file size (in bytes)
     `%b` | number of blocks allocated for file
     `%k` | optimal file system I/O operation block size (`2048`,`4096`,...)
-    – | –
+    **Filetype** ||
     `%T` | file type symbol (regular file:`*empty*`,symlink:`@`,directory:`/`,fifo:`|`,executable file:`*`,char device file:`*empty*`,block device file:`*empty*`,socket:`=`)
     `%HT` | file type name (`Regular File`, `Symbolic Link`, `Directory`, `Fifo File`, `Block Device`, `Character Device`,`Socket`)
-    – | –
-    `%z` | file size (in bytes)
-    `%b` | number of blocks allocated for file
-    `%k` | optimal file system I/O operation block size (`2048`,`4096`,...)
+    **Other** ||
     `%f` | user defined flags for file
     `%v` | inode generation number
 

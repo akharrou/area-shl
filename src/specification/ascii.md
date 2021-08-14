@@ -17,7 +17,7 @@ Each character is mapped to a number code that the computer understands as its b
 
 Path | Description
 - | -
-📂 `/usr/share/misc/ascii` | ASCII table in octal, hexadecimal, and decimal notation.
+`/usr/share/misc/ascii` | ASCII table in octal, hexadecimal, and decimal notation.
 
 ## SEE
 

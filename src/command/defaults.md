@@ -53,20 +53,6 @@ tags: [access,get,print,edit,modify,change,macOS,system,user,defaults,settings,p
 
 
 ```bash
-#ℹ︎ change format of macos screenshots (default: `png`)
-❯ defaults write com.apple.screencapture type [jpg|png|tiff|pdf|...]
-```
-
-
-
-```bash
-#ℹ︎ change default destination location path of screencapture screenshots captures
-❯ defaults write com.apple.screencapture location PATH
-```
-
-
-
-```bash
 #ℹ︎ set/change/modify login window text
 ❯ sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Your text"
 ```

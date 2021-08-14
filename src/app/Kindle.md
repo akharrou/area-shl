@@ -15,10 +15,23 @@ tags: [ebook,reader,ereader]
 ```
 
 
+## RECIPES
+
+----
+#### To get/set Kindle settings:
+
+
+```bash
+#ℹ︎ get/read/set/write Kindle user library content path
+❯ defaults read com.amazon.Kindle User\ Settings.CONTENT_PATH
+```
+
+
 
 ## VARIABLES
 
-    export KINDLECONTENT="$HOME/.local/share/kindle/My Kindle Content"
+    [[ `uname -s` == *Darwin* ]] &&\
+        export KINDLECONTENT="`defaults read com.amazon.Kindle User\ Settings.CONTENT_PATH`"
 
 ## ALIASES
 
@@ -29,7 +42,7 @@ tags: [ebook,reader,ereader]
 
 Path | Description
 - | -
-📂 `$HOME/Library/Kindle/My Kindle Content` | Default directory containing Kindle data.
+`$HOME/Library/Kindle/My Kindle Content` | Default directory containing Kindle data.
 
 ## SEEFURTHER
 

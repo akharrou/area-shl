@@ -25,7 +25,7 @@ tags: [macos,native,application,work,messaging,chat,groups]
 
 Path | Description
 - | -
-📂 `/Applications/Slack.app` | Application path location.
+`/Applications/Slack.app` | Application path location.
 
 ## SEEALSO
 

@@ -699,8 +699,8 @@ Legal operators are:
 
 Path | Description
 - | -
-📂 `/usr/local/opt/fzf/shell/completion.zsh` | Completions file.
-📂 `/usr/local/opt/fzf/shell/key-bindings.zsh` | Key bindings file.
+`/usr/local/opt/fzf/shell/completion.zsh` | Completions file.
+`/usr/local/opt/fzf/shell/key-bindings.zsh` | Key bindings file.
 
 ## BUGS
 

@@ -70,11 +70,11 @@ tags: [automatically,load,unload,current,directory,environment,variables]
 
 Path | Description
 - | -
-📂 `$XDG_CONFIG_HOME/direnv/direnvrc` | `direnv` configuration file.
-📂 `$XDG_CONFIG_HOME/direnv/lib/*.sh` | Third-party extensions to `direnv-stdlib`.
-📂 `$XDG_DATA_HOME/direnv/allow` | Records which `.envrc` files have been `direnv` allowed.
-📂 `PROJECTROOT/.envrc` | User directory-specific environment configuration file.
-📂 `PROJECTROOT/.env` | User directory-specific environment file.
+`$XDG_CONFIG_HOME/direnv/direnvrc` | `direnv` configuration file.
+`$XDG_CONFIG_HOME/direnv/lib/*.sh` | Third-party extensions to `direnv-stdlib`.
+`$XDG_DATA_HOME/direnv/allow` | Records which `.envrc` files have been `direnv` allowed.
+`PROJECTROOT/.envrc` | User directory-specific environment configuration file.
+`PROJECTROOT/.env` | User directory-specific environment file.
 
 ## SEE
 

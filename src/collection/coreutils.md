@@ -28,7 +28,7 @@ Commands also provided by macOS are installed with the prefix "g". If you need t
 
 Path | Description
 - | -
-📂 `/usr/local/opt/coreutils/libexec/gnubin/` | Binary executable files collection location path.
+`/usr/local/opt/coreutils/libexec/gnubin/` | Binary executable files collection location path.
 
 ## SEEALSO
 

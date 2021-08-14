@@ -73,7 +73,7 @@ tags: [manage,macos,system,software,updates,downloads,installations]
 
 Path | Description
 - | -
-📂 `/Library/Updates/` | Directory containing downloaded software updates, that are ready for installation.
+`/Library/Updates/` | Directory containing downloaded software updates, that are ready for installation.
 
 ## SEE
 

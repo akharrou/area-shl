@@ -171,14 +171,14 @@ Key | Action
 
 Path | Description
 - | -
-📂 `~/.vscode` | global workspace settings
-📂 `~/.vscode/extensions` | global workspace extensions
-📂 `~/Library/Application\ Support/Code/` | application data folder
-📂 `~/Library/Application\ Support/Code/User/` | user-data folder
-📂 `~/Library/Application\ Support/Code/User/settings.json` | user settings
-📂 `~/Library/Application\ Support/Code/User/keybindings.json` | user keybindings
-📂 `~/Library/Application\ Support/Code/User/snippets/` | user snippets
-📂 `~/Library/Application\ Support/Code/User/globalStorage/alefragnani.project-manager/projects.json` | user projects
+`~/.vscode` | global workspace settings
+`~/.vscode/extensions` | global workspace extensions
+`~/Library/Application\ Support/Code/` | application data folder
+`~/Library/Application\ Support/Code/User/` | user-data folder
+`~/Library/Application\ Support/Code/User/settings.json` | user settings
+`~/Library/Application\ Support/Code/User/keybindings.json` | user keybindings
+`~/Library/Application\ Support/Code/User/snippets/` | user snippets
+`~/Library/Application\ Support/Code/User/globalStorage/alefragnani.project-manager/projects.json` | user projects
 
 ## SEEALSO
 

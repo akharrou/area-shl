@@ -107,7 +107,7 @@ Some helpful tables:
 
 Path | Description
 - | -
-📂 `/etc/profile` | system wide `umask` configuration location
+`/etc/profile` | system wide `umask` configuration location
 
 ## SEE
 

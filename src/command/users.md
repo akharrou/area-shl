@@ -28,7 +28,7 @@ tags: [get,print,list,currently,logged-in,users,names,usernames]
 
 Path | Description
 - | -
-📂 `/var/run/utmpx` | Data file containing names of currently logged-in users.
+`/var/run/utmpx` | Data file containing names of currently logged-in users.
 
 ## SEE
 

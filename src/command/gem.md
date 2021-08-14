@@ -63,7 +63,7 @@ tags: [ruby,language,package,manager]
 
 Path | Description
 - | -
-📂 `/usr/local/lib/ruby/gems/3.0.0/bin/` | Default directory containing binaries installed by `gem`.
+`/usr/local/lib/ruby/gems/3.0.0/bin/` | Default directory containing binaries installed by `gem`.
 
 ## SEE
 

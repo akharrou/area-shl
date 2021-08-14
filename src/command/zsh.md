@@ -204,20 +204,20 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/bin/zsh` | `zsh` executable file location path
-📂 `${TMPPREFIX}*` | default is `/tmp/zsh*`
-📂 `$ZSH_CUSTOM/plugins/` | zsh installed external plugins folder
-📂 `$ZSH_CUSTOM/themes/` | zsh installed external themes folder
-📂 `/etc/zshenv` | system wide zsh shell environment initialization/startup file
-📂 `/etc/zprofile` | system wide zsh shell profile initialization/startup file
-📂 `/etc/zshrc` | system wide zsh shell configuration initialization/startup file
-📂 `/etc/zlogin` | system wide zsh shell login setup initialization/startup file
-📂 `/etc/zlogout` | system wide zsh shell logout cleanup shutdown file
-📂 `$ZDOTDIR/.zshenv` | system user zsh shell environment initialization/startup file
-📂 `$ZDOTDIR/.zprofile` | system user zsh shell profile initialization/startup file
-📂 `$ZDOTDIR/.zshrc` | system user zsh shell configuration initialization/startup file
-📂 `$ZDOTDIR/.zlogin` | system user zsh shell login setup initialization/startup file
-📂 `$ZDOTDIR/.zlogout` | system user zsh shell logout cleanup shutdown file
+`/bin/zsh` | `zsh` executable file location path
+`${TMPPREFIX}*` | default is `/tmp/zsh*`
+`$ZSH_CUSTOM/plugins/` | zsh installed external plugins folder
+`$ZSH_CUSTOM/themes/` | zsh installed external themes folder
+`/etc/zshenv` | system wide zsh shell environment initialization/startup file
+`/etc/zprofile` | system wide zsh shell profile initialization/startup file
+`/etc/zshrc` | system wide zsh shell configuration initialization/startup file
+`/etc/zlogin` | system wide zsh shell login setup initialization/startup file
+`/etc/zlogout` | system wide zsh shell logout cleanup shutdown file
+`$ZDOTDIR/.zshenv` | system user zsh shell environment initialization/startup file
+`$ZDOTDIR/.zprofile` | system user zsh shell profile initialization/startup file
+`$ZDOTDIR/.zshrc` | system user zsh shell configuration initialization/startup file
+`$ZDOTDIR/.zlogin` | system user zsh shell login setup initialization/startup file
+`$ZDOTDIR/.zlogout` | system user zsh shell logout cleanup shutdown file
 
 ## SEE
 

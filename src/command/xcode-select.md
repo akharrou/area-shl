@@ -66,7 +66,7 @@ tags: [manages,active,xcode,bsd,developer,tools,directory]
 
 Path | Description
 - | -
-📂 `/Applications/Xcode.app/Contents/Developer` | Default developer directory.
+`/Applications/Xcode.app/Contents/Developer` | Default developer directory.
 
 ## SEE
 

@@ -82,8 +82,8 @@ Variable | Description
 
 Path | Description
 - | -
-📂 `/usr/share/terminfo` | Compiled terminal description database.
-📂 `/usr/share/tabset` | Tab settings for some terminals.
+`/usr/share/terminfo` | Compiled terminal description database.
+`/usr/share/tabset` | Tab settings for some terminals.
 
 ## SEE
 

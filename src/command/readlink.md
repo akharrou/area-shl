@@ -33,13 +33,13 @@ Prints value of a symbolic link or canonical file name (i.e its full path).
 
 ```bash
 #ℹ︎ get [symbolic link] file’s relative full path name
-❯ readlink FILE
+❯ readlink <FILE>
 ```
 
 
 ```bash
 #ℹ︎ get [symbolic link] file’s canonical name, i.e absolute full path name
-❯ greadlink -f FILE
+❯ greadlink -f <FILE>
 ```
 
 

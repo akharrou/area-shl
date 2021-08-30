@@ -398,7 +398,7 @@ The `f` flag refers to the temporary file that contains the selected, and evalua
     [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]] &&\
         export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
 
-    if [[ $SHELL = *zsh ]]; then
+    if [[ ${SHELL##*/} = zsh ]]; then
         # [ -f $XDG_CONFIG_HOME/fzf/fzf.zsh ] && . $XDG_CONFIG_HOME/fzf/fzf.zsh
         if [[ $- == *i* ]]; then
             [[ -r /usr/local/opt/fzf/shell/completion.zsh  ]] &&\
@@ -406,7 +406,7 @@ The `f` flag refers to the temporary file that contains the selected, and evalua
             [[ -r /usr/local/opt/fzf/shell/key-bindings.zsh ]] &&\
                 . /usr/local/opt/fzf/shell/key-bindings.zsh 2> /dev/null
         fi
-    elif [[ $SHELL = *bash ]]; then
+    elif [[ ${SHELL##*/} = bash ]]; then
         # [ -f $XDG_CONFIG_HOME/fzf/fzf.bash ] && . $XDG_CONFIG_HOME/fzf/fzf.bash
         if [[ $- == *i* ]]; then
             [[ -r /usr/local/opt/fzf/shell/completion.bash ]] &&\
@@ -648,17 +648,17 @@ The `f` flag refers to the temporary file that contains the selected, and evalua
 
 ## EXTRAS
 
-    if [[ $SHELL = *zsh ]]; then
+    if [[ ${SHELL##*/} = zsh ]]; then
 
-        # Replace fzf’'s `ctrl+t` binding
-        bindkey -r "^T"
-        bindkey "\eJ" fzf-file-widget
+        # Replace fzf’'s `ctrl+t` binding with `alt+shift+j`
+        bindkey -r $KEY_CTRL_T
+        bindkey $KEY_ALT_SHIFT_J fzf-file-widget
 
-        # Replace fzf’'s `ctrl+t` binding
-        bindkey "^R" history-incremental-pattern-search-backward
-        bindkey "\er" fzf-history-widget
+        # Replace fzf’'s `ctrl+r` binding with `alt+r`
+        bindkey $KEY_CTRL_R history-incremental-pattern-search-backward
+        bindkey $KEY_ALT_R fzf-history-widget
 
-    elif [[ $SHELL = *bash ]]; then
+    elif [[ ${SHELL##*/} = bash ]]; then
 
         # Replace fzf’'s `ctrl+t` binding
         bind -r "\C-t"

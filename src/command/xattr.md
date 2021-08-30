@@ -27,7 +27,7 @@ Extended attributes are arbitrary metadata stored with a file, but separate from
 
 ```bash
 #ℹ︎ get/print/list extended file attributes
-❯ xattr FILE
+❯ xattr <FILE>
 ```
 
     com.apple.lastuseddate#PS
@@ -36,7 +36,7 @@ Extended attributes are arbitrary metadata stored with a file, but separate from
 
 ```bash
 #ℹ︎ get/print value of single specified extended file attribute
-❯ xattr -p com.apple.quarantine FILE
+❯ xattr -p com.apple.quarantine <FILE>
 ```
 
     0082;603a52ec;Preview;
@@ -44,7 +44,7 @@ Extended attributes are arbitrary metadata stored with a file, but separate from
 
 ```bash
 #ℹ︎ get/print/list value of all extended file attribute
-❯ xattr -l FILE
+❯ xattr -l <FILE>
 ```
 
     com.apple.lastuseddate#PS:
@@ -58,7 +58,7 @@ Extended attributes are arbitrary metadata stored with a file, but separate from
 
 ```bash
 #ℹ︎ delete/remove specified extended file attributes
-❯ xattr -d com.apple.quarantine FILE
+❯ xattr -d com.apple.quarantine <FILE>
 ```
 
 

@@ -23,7 +23,7 @@ tags: [simple,text,editor]
 
 ```bash
 #ℹ︎ edit data files
-❯ nano FILE
+❯ nano <FILE>
 ```
 
 

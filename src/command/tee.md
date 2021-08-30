@@ -23,17 +23,17 @@ tags: [pipe,fitting,forwarding,redirect,output,multiple,to,files]
 
 ```bash
 #ℹ︎ overwrite files with standard input
-❯ echo "hello" | tee FILE ... | cat
+❯ echo "hello" | tee <FILE> ... | cat
 ```
 
     "hello"
-    ❯ cat FILE
+    ❯ cat <FILE>
     hello
 
 
 ```bash
 #ℹ︎ append standard input to files
-❯ echo "hello" | tee -a FILE ... | cat
+❯ echo "hello" | tee -a <FILE> ... | cat
 ```
 
     "hello"
@@ -46,7 +46,7 @@ tags: [pipe,fitting,forwarding,redirect,output,multiple,to,files]
 
 ```bash
 #ℹ︎ print/write output to file, and to standard-output if DEBUG flag is set on
-❯ if [[ $DEBUG ]]; then tee FILE else 1>FILE fi
+❯ if [[ $DEBUG ]]; then tee <FILE> else 1><FILE> fi
 ```
 
 

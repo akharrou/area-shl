@@ -54,10 +54,8 @@ tags: [change,command,line,text,touppercase,tolowercase]
     zle -N _mtxr-to-upper
     zle -N _mtxr-to-lower
 
-    bindkey '^[1' _mtxr-to-lower       # iterm keymap: cmd+1 --> 'esc+1'
-    bindkey '^[2' _mtxr-to-upper       # iterm keymap: cmd+2 --> 'esc+2'
-    bindkey '^[numpad1' _mtxr-to-lower # iterm keymap: numpad+1 --> 'esc+numpad1'
-    bindkey '^[numpad4' _mtxr-to-upper # iterm keymap: numpad+4 --> 'esc+numpad4'
+    bindkey $KEY_ALT_2 _mtxr-to-lower       # iterm keymap: cmd+1 --> 'esc+1'
+    bindkey $KEY_ALT_1 _mtxr-to-upper       # iterm keymap: cmd+2 --> 'esc+2'
 
 
 ## SEEFURTHER

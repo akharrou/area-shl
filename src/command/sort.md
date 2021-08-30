@@ -23,21 +23,21 @@ tags: [sort,text,files]
 
 ```bash
 #ℹ︎ sort
-❯ sort FILE
+❯ sort <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ reverse sort
-❯ sort --reverse FILE
+❯ sort --reverse <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ sort output/file-lines, keep unique lines/keys, remove/delete duplicate lines
-❯ sort --unique FILE
+❯ sort --unique <FILE>
 ```
 
 
@@ -47,7 +47,7 @@ tags: [sort,text,files]
 
 ```bash
 #ℹ︎ sort file, using specified Nth field (third), delimited by specified delimiter/seperator (comma character, e.g. CSV)
-❯ sort --key=3 --field-seperator="," FILE
+❯ sort --key=3 --field-seperator="," <FILE>
 ```
 
 

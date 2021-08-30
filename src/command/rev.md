@@ -31,7 +31,7 @@ tags: [reverse,strings,file,output,lines]
 
 ```bash
 #ℹ︎ reverse files line contents
-❯ rev FILE
+❯ rev <FILE>
 ```
 
     .rotide txet drah a si sihT

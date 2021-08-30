@@ -48,13 +48,13 @@ Options:
 
 ```bash
 #ℹ︎ extract yaml metadata header
-❯ yq --front-matter=extract eval YQSCRIPT FILE.md
+❯ yq --front-matter=extract eval YQSCRIPT <FILE>.md
 ```
 
     status: INCOMPLETE
     title: openssl
 
-    ❯ yq --front-matter=process eval YQSCRIPT FILE.md  # edit/modify/change file yaml metadata header
+    ❯ yq --front-matter=process eval YQSCRIPT <FILE>.md  # edit/modify/change file yaml metadata header
     status: INCOMPLETE
     title: openssl
     ---
@@ -70,7 +70,7 @@ To avoid destroying the original birth/creation datetime, use the `>` and/or `>>
 
 If overwriting a file, i.e using `>`, you cannot read the file and write to it in one command or pipeline. To achieve desired result with POSIX toolchest, you need to use a temporary file:
 
-    ❯ yq --front-matter=process eval YQSCRIPT FILE.md > FILE.md~; cat FILE.md~ > FILE.md && rm FILE.md~  # edit/modify/change file yaml metadata header, preserve birth/creation datetime
+    ❯ yq --front-matter=process eval YQSCRIPT <FILE>.md > <FILE>.md~; cat <FILE>.md~ > <FILE>.md && rm <FILE>.md~  # edit/modify/change file yaml metadata header, preserve birth/creation datetime
 
 ----
 #### To convert/transform between `yaml` and `json` data files/standard-input:
@@ -78,14 +78,14 @@ If overwriting a file, i.e using `>`, you cannot read the file and write to it i
 
 ```bash
 #ℹ︎ convert/transform json data file/standard-input, into yaml
-❯ yq --prettyPrint eval YQSCRIPT FILE.json
+❯ yq --prettyPrint eval YQSCRIPT <FILE>.json
 ```
 
 
 
 ```bash
 #ℹ︎ convert/transform yaml data file/standard-input, into json, compact as one line
-❯ yq --prettyPrint --tojson --indent=0 eval YQSCRIPT FILE.yaml
+❯ yq --prettyPrint --tojson --indent=0 eval YQSCRIPT <FILE>.yaml
 ```
 
 

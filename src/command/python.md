@@ -34,8 +34,8 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 
 
 ```bash
-#ℹ︎ start HTTP live server
-❯ python -m http.server 8000 --bind 127.0.0.1 --directory .
+#ℹ︎ run/launch/start/execute HTTP webpage/website host server
+❯ python -m http.server --bind 127.0.0.1 8000 --directory ./site
 ```
 
 
@@ -64,19 +64,26 @@ tags: [python,programming,language,interpreter,program,blue,yellow,snakes]
 
 
 
+```bash
+#ℹ︎ get/print/display list of printable ascii characters
+❯ python -c "import string; print(string.ascii_letters, string.digits, string.punctuation, sep=’’)"
+```
+
+
+
 ## INIT
 
     export PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
 
 ## VARIABLES
 
-    export PYTHONSTARTUP="$CONFIG/python/pythonrc"
+    export PYTHONSTARTUP="$CONFIG/python/config"
 
 ## ALIASES
 
-    alias py="python"
-    alias ipy="ipython"
-    alias pyd="python -m pydoc"
+    # alias py="python"
+    # alias ipy="ipython"
+    # alias pyd="python -m pydoc"
     # alias pymodule="python setup.py build_ext --inplace"
 
 ## EXTRAS

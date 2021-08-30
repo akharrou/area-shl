@@ -30,14 +30,14 @@ tags: [regex,search,find,replace,text,files,inplace]
 
 ```bash
 #ℹ︎ search/find matching regex lines, replace (text file in-place)
-❯ sd -pfim PCRE2 REPL FILE
+❯ sd -pfim PCRE2 REPL <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ search/find matching literal string lines, replace (text file in-place)
-❯ sd -pfim -s LITERAL REPL FILE
+❯ sd -pfim -s LITERAL REPL <FILE>
 ```
 
 

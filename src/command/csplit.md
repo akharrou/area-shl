@@ -20,19 +20,19 @@ tags: [split,break,divide,chop,cleave,file,standard,input,into,context,determine
 ----
 #### To split/divide/breakup file/standard-input, based on basic regular expression:
 
-    ❯ csplit -f PREFIX -n SUFFIXLEN FILE "/BRE/" {OCCURRENCES}
+    ❯ csplit -f PREFIX -n SUFFIXLEN <FILE> "/BREGEX/" {OCCURRENCES}
 
 ```bash
 #ℹ︎ split/divide/breakup file, based on basic regular expression
-❯ csplit -f lib- -n2 FILE.c "/^// function .*$/" {2}
+❯ csplit -f lib- -n2 <FILE>.c "/^// function .*$/" {2}
 ```
 
 
-    ❯ ... | csplit -f PREFIX -n SUFFIXLEN - "/BRE/" {OCCURRENCES}
+    ❯ ... | csplit -f PREFIX -n SUFFIXLEN - "/BREGEX/" {OCCURRENCES}
 
 ```bash
 #ℹ︎ split/divide/breakup standard input, based on basic regular expression
-❯ cat FILE.c | csplit -f "stdin-" -n2 - "/^// function .*$/" {2}
+❯ cat <FILE>.c | csplit -f "stdin-" -n2 - "/^// function .*$/" {2}
 ```
 
 

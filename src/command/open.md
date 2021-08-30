@@ -23,21 +23,21 @@ tags: [open,reveal,files,folders,directories,url,application]
 
 ```bash
 #ℹ︎ open a file with an application, specified by path, with arguments
-❯ open -a APPPATH FILE --args <arg> ...
+❯ open -a APPPATH <FILE> --args <arg> ...
 ```
 
 
 
 ```bash
 #ℹ︎ open a file with an application, specified by bundle identifier, with arguments
-❯ open -b APPBUNDLE FILE --args ARG ...
+❯ open -b APPBUNDLE <FILE> --args ARG ...
 ```
 
 
 
 ```bash
 #ℹ︎ open a file in a new instance of an application, with arguments
-❯ open -n FILE --args ARG ...
+❯ open -n <FILE> --args ARG ...
 ```
 
 
@@ -49,7 +49,7 @@ You can also: open file in the application in the FOREGROUND (`-g` option) or HI
 
 ```bash
 #ℹ︎ open/reveal file in Finder file manager
-❯ open -R FILE
+❯ open -R <FILE>
 ```
 
 
@@ -58,6 +58,10 @@ You can also: open file in the application in the FOREGROUND (`-g` option) or HI
 
     alias o="open"
 
+
+## NOTES
+
+It’s `start` in Windows, `open` in MacOS, `xdg-open` in others.
 
 ## SEE
 

@@ -27,14 +27,14 @@ tags: [shell,theme,prompt,starship]
         echo 🚀
     }
 
-    if [[ $SHELL = *zsh ]]; then
+    if [[ ${SHELL##*/} = zsh ]]; then
         ZSH_THEME="starship"
         # precmd_functions+=(__starshipPrecmd)
         eval "$(starship init zsh)"
-    elif [[ $SHELL = *bash ]]; then
+    elif [[ ${SHELL##*/} = bash ]]; then
         # starship_precmd_user_func="__starshipPrecmd"
         eval "$(starship init bash)"
-    elif [[ $SHELL = *fish ]]; then
+    elif [[ ${SHELL##*/} = fish ]]; then
         starship init fish | source
     fi
 

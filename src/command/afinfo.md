@@ -23,7 +23,7 @@ tags: [get,print,list,audio,sources,files,information]
 
 ```bash
 #ℹ︎ get/print long audio sources files information
-❯ afinfo --info FILE.mp3
+❯ afinfo --info <FILE>.mp3
 ```
 
     File:           FILE.mp3
@@ -63,7 +63,7 @@ tags: [get,print,list,audio,sources,files,information]
 
 ```bash
 #ℹ︎ get/print brief audio sources files information
-❯ afinfo --brief FILE.mp3
+❯ afinfo --brief <FILE>.mp3
 ```
 
     FILE.mp3, MPG3, Num Tracks:     1
@@ -73,7 +73,7 @@ tags: [get,print,list,audio,sources,files,information]
 
 ```bash
 #ℹ︎ get/print audio sources files information, as xml
-❯ afinfo --xml FILE.mp3
+❯ afinfo --xml <FILE>.mp3
 ```
 
 
@@ -85,7 +85,7 @@ tags: [get,print,list,audio,sources,files,information]
 
 ```bash
 #ℹ︎ get/print audio sources files bit rate
-❯ afinfo FILE.mp3 | grep "bit rate"
+❯ afinfo <FILE>.mp3 | grep "bit rate"
 ```
 
     bit rate: 160000 bits per second

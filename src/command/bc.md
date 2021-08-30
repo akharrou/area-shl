@@ -27,6 +27,16 @@ tags: [arbitrary,precision,calculator,language]
 ```
 
 
+----
+#### To convert number bases:
+
+
+```bash
+#ℹ︎ convert decimal numbers to hexadecimal
+❯ bc <<< "obase=16; NUM"
+```
+
+
 
 ## SEE
 

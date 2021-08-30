@@ -23,14 +23,14 @@ tags: [converts,formats,processes,markdown,to,rfc,style,document]
 
 ```bash
 #ℹ︎ convert markdown source file and make RFC style xml, text, html, and pdf documents
-❯ kramdown-rfc2629 --verbose --v3 FILE.md >FILE.rfc3.xml && xml2rfc --verbose --table-borders=full --no-pagination --v3 --text --html FILE.rfc3.xml
+❯ kramdown-rfc2629 --verbose --v3 <FILE>.md ><FILE>.rfc3.xml && xml2rfc --verbose --table-borders=full --no-pagination --v3 --text --html <FILE>.rfc3.xml
 ```
 
 
 
 ```bash
 #ℹ︎ convert markdown source file and make RFC style xml, text, html, and pdf documents
-❯ kdrfc FILE.md
+❯ kdrfc <FILE>.md
 ```
 
 

@@ -46,7 +46,7 @@ Full-featured text processing language with a syntax reminiscent of C.
 
 ```bash
 #ℹ︎ get/print/display file contennts lines from shortest to longest
-❯ awk ’{ print length($0) " " $0; }’ FILE | sort -n | cut -d " " -f 2-
+❯ awk ’{ print length($0) " " $0; }’ <FILE> | sort -n | cut -d " " -f 2-
 ```
 
 

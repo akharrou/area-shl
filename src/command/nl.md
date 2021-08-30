@@ -23,7 +23,7 @@ tags: [get,print,display,list,formatted,numbers,text,files,lines]
 
 ```bash
 #ℹ︎ get/print/list file contents, number lines
-❯ nl FILE
+❯ nl <FILE>
 ```
 
           1 ...
@@ -34,7 +34,7 @@ tags: [get,print,display,list,formatted,numbers,text,files,lines]
 
 ```bash
 #ℹ︎ get/print/list file contents, number lines, with specified increments
-❯ nl -i 3 FILE
+❯ nl -i 3 <FILE>
 ```
 
           1 ...
@@ -45,7 +45,7 @@ tags: [get,print,display,list,formatted,numbers,text,files,lines]
 ----
 #### To format line numbering of text files:
 
-    ❯ nl -w2 -nrn -s " | " FILE
+    ❯ nl -w2 -nrn -s " | " <FILE>
      1 | Hello world !
      2 | This is the second line.
      3 | This is the third line.

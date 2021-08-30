@@ -22,6 +22,16 @@ Displays network information
 ## USECASES
 
 ----
+#### To check/list open internet or Unix domain sockets:
+
+
+```bash
+#ℹ︎ get/print/display/check open/listening ports in use
+❯ netstat -nat | grep LISTEN
+```
+
+
+----
 #### To manage network:
 
 
@@ -46,8 +56,9 @@ See `netintro(4)`.
 
 Path | Description
 - | -
-`/etc/protocols` | internet protocols
-`/etc/networks` | networks database
+`/etc/services` | Network services.
+`/etc/protocols` | Internet protocols.
+`/etc/networks` | Networks database.
 
 ## SEE
 
@@ -55,5 +66,5 @@ Path | Description
 
 ## SEEALSO
 
-    ifconfig(8), ipconfig(8), traceroute(8), route(8), ping(8), iostat(8), nfstat, nettop, netintro(4)
+    ifconfig(8), ipconfig(8), traceroute(8), route(8), ping(8), iostat(8), nfstat, nettop, netintro(4), lsof(1), nmap(1)
 

@@ -30,7 +30,7 @@ tags: [output,play,audio,file,sound,music,tone,alert]
 
 ```bash
 #ℹ︎ run/output/play music/tone/alert sound audio file, at specified playback speed rate, for specified time duration (in seconds)
-❯ afplay --debug --rate 2.5 --time 5 FILE.mp3
+❯ afplay --debug --rate 2.5 --time 5 <FILE>.mp3
 ```
 
     Playing file: FILE.mp3

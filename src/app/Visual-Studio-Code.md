@@ -124,7 +124,7 @@ Visual Studio Code Explorers can only be downloaded and installed manually from 
     # alias codei="code-insiders ${CODE_INSIDERS_OPTS}"
     alias codee="code-exploration ${CODE_EXPLORATION_OPTS}"
 
-    if [[ $SHELL = *zsh ]]; then
+    if [[ ${SHELL##*/} = zsh ]]; then
         alias -s {md,rmd,Rmd}="code"
     fi
 

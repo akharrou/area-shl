@@ -8,15 +8,15 @@ tags: [get,print,display,list,user,visited,remembered,directory,directories,stac
 
 ## BRIEF
 
-    dirs [-clpv] [+N] [-N]
+    ❯ dirs [-clpv] [+N] [-N]
 
-    Display the list of currently remembered directories. Directories find their way onto the list with the `pushd` command; you can get back up through the list with the `popd` command.
+Display the list of currently remembered directories. Directories find their way onto the list with the `pushd` command; you can get back up through the list with the `popd` command.
 
-    The `-l` flag specifies that `dirs` should not print shorthand versions of directories which are relative to your home directory.  This means that `~/bin` might be displayed as `/homes/bfox/bin`.  The `-v` flag causes `dirs` to print the directory stack with one entry per line, prepending the directory name with its position in the stack.  The `-p` flag does the same thing, but the stack position is not prepended. The `-c` flag clears the directory stack by deleting all of the elements.
+The `-l` flag specifies that `dirs` should not print shorthand versions of directories which are relative to your home directory.  This means that `~/bin` might be displayed as `/homes/bfox/bin`.  The `-v` flag causes `dirs` to print the directory stack with one entry per line, prepending the directory name with its position in the stack.  The `-p` flag does the same thing, but the stack position is not prepended. The `-c` flag clears the directory stack by deleting all of the elements.
 
-    +N  displays the Nth entry counting from the left of the list shown by dirs when invoked without options, starting with zero.
+`+N` displays the Nth entry counting from the left of the list shown by dirs when invoked without options, starting with zero.
 
-    -N  displays the Nth entry counting from the right of the list shown by dirs when invoked without options, starting with zero.
+`-N` displays the Nth entry counting from the right of the list shown by dirs when invoked without options, starting with zero.
 
 ## INSTALLATION
 
@@ -39,16 +39,19 @@ tags: [get,print,display,list,user,visited,remembered,directory,directories,stac
 ```
 
 
+
 ```bash
 #ℹ︎ list directory stack, one per line
 ❯ dirs -p  
 ```
 
 
+
 ```bash
 #ℹ︎ list directory stack, one per line, full paths
 ❯ dirs -pl 
 ```
+
 
 
 ```bash
@@ -58,9 +61,17 @@ tags: [get,print,display,list,user,visited,remembered,directory,directories,stac
 
 
 
-## ALIASES
+## EXTRAS
 
-    alias dirs="dirs -plv"   # list, one per line, full paths, enumerated
+    function d () {
+        if [[ -n $1 ]]; then
+            dirs "$@"
+        else
+            # list, one per line, full paths, and enumerated
+            dirs -plv
+        fi
+    }
+    compdef _dirs d
 
 
 ## SEE
@@ -69,5 +80,5 @@ tags: [get,print,display,list,user,visited,remembered,directory,directories,stac
 
 ## SEEALSO
 
-    cd, autojump
+    cd(1), autojump(1)
 

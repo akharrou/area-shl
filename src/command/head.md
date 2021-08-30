@@ -20,11 +20,11 @@ tags: [display,first,lines,of,file]
 ----
 #### To get/print/display first N specified lines/bytes from file or standard input:
 
-    ❯ cat FILE | head -n 1
+    ❯ cat <FILE> | head -n 1
 
 ```bash
 #ℹ︎ get/print/display the first N specified lines of standard-in/file
-❯ head -1 FILE
+❯ head -1 <FILE>
 ```
 
     <!DOCTYPE html>
@@ -32,7 +32,7 @@ tags: [display,first,lines,of,file]
 
 ```bash
 #ℹ︎ get/print/display the first N specified bytes of standard-in/file
-❯ head -b 1 FILE
+❯ head -b 1 <FILE>
 ```
 
     <

@@ -26,20 +26,20 @@ Create, collect, view interactive cheatsheets on the command line. It was design
 
 
 ```bash
+#ℹ︎ get/print/display community driven cheathseets
+❯ cheat COMMAND
+```
+
+
+```bash
 #ℹ︎ list cheatsheets
-❯ cheat -l
+❯ cheat --list
 ```
 
 
 ```bash
 #ℹ︎ create/edit cheatsheets
-❯ cheat -e CHEATSHEET
-```
-
-
-```bash
-#ℹ︎ view cheatsheets
-❯ cheat CHEATSHEET
+❯ cheat --edit=COMMAND
 ```
 
 
@@ -49,18 +49,22 @@ Create, collect, view interactive cheatsheets on the command line. It was design
 
 ## ALIASES
 
-    alias cht="cheat"
+    # alias cht="cheat"
 
 
 ## PATHS
 
 Path | Description
 - | -
-`~/.config/cheat/cheatsheets/personal` | Personal cheatsheet files location.
+`$HOME/.config/cheat/cheatsheets/personal` | Personal cheatsheet files location.
 
 ## SEE
 
     cheat -h
+
+## SEEALSO
+
+    tldr(1), bropages
 
 ## SEEFURTHER
 

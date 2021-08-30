@@ -2,4 +2,4 @@
 Makefile
 build.sh
 venv/
-.DS_Store
+*.DS_Store

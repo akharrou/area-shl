@@ -75,7 +75,7 @@ Navigate your filesystem, faster. Maintains a database of the directories you us
 ## INIT
 
     [ -f /usr/local/etc/profile.d/autojump.sh ] &&\
-         . /usr/local/etc/profile.d/autojump.sh
+        . /usr/local/etc/profile.d/autojump.sh
 
 ## PROCEDURES
 

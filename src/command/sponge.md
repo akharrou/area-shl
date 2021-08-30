@@ -30,13 +30,13 @@ tags: [soak,write,standard,input,output,to,file]
 
 ```bash
 #ℹ︎ soak standard input, write to specified file
-❯ sponge FILE
+❯ sponge <FILE>
 ```
 
 
 ```bash
 #ℹ︎ soak standard input, append to specified file
-❯ sponge -a FILE
+❯ sponge -a <FILE>
 ```
 
 

@@ -100,12 +100,14 @@ tags: [manage,python,interpreter,versions]
 
 ## INIT
 
-    export PYENV_ROOT="$DATA/pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    export PYENV_VERSION="3.9.6"
+    # NOTE: if not actively developing with this, it really becomes overkill, so comment it out.
 
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
+    # export PYENV_ROOT="$DATA/pyenv"
+    # export PATH="$PYENV_ROOT/bin:$PATH"
+    # export PYENV_VERSION="3.9.6"
+
+    # eval "$(pyenv init --path)"
+    # eval "$(pyenv init -)"
 
 
 ## ENVIRONMENT

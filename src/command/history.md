@@ -57,9 +57,17 @@ If the `$HISTTIMEFORMAT` variable is set and not null, its value is used as a fo
 
 ## VARIABLES
 
-    HISTFILE="$CACHE/$SHELLNAME/history"
-    HISTSIZE=20000
-    SAVEHIST=10000
+    # Included in `.profile` as they are especially important
+    # HISTFILE="$CACHE/${SHELL##*/}/history"
+    # HISTSIZE=20000
+    # SAVEHIST=10000
+
+    # prevent including space led commands to history (e.g. w/ passwords)
+    if [[ ${SHELL##*/} = zsh ]]; then
+        setopt histignorespace
+    elif [[ ${SHELL##*/} = bash ]]; then
+        HISTCONTROL=ignorespace
+    fi
 
 
 ## ENVIRONMENT

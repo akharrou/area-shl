@@ -367,7 +367,7 @@ Tools and libraries for interacting with Google Cloud products and services.
         --header "Content-Type: application/json" \
         --data "{…}"
 
-See:
+References:
 
 - <https://developers.google.com/identity/protocols/oauth2/web-server>
 - <https://developers.google.com/identity/protocols/oauth2/scopes>
@@ -377,16 +377,13 @@ See:
 ## INIT
 
     if [[ -d /usr/local/Caskroom/google-cloud-sdk ]]; then
-
-        export PATH=/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH
-
-        if [[ $SHELL = *bash ]]; then
+        if [[ ${SHELL##*/} = bash ]]; then
             source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
             source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
-        elif [[ $SHELL = *zsh ]]; then
+        elif [[ ${SHELL##*/} = zsh ]]; then
             source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
             source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-        elif [[ $SHELL = *fish ]]; then
+        elif [[ ${SHELL##*/} = fish ]]; then
             source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
         fi
     fi

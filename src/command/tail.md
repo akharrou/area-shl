@@ -23,13 +23,13 @@ tags: [get,print,display,last,file,part,section]
 
 ```bash
 #ℹ︎ get/print/display last N (specified) file lines
-❯ tail -3 FILE
+❯ tail -3 <FILE>
 ```
 
 
 ```bash
-#ℹ︎ get/print/display watch FILE data in real time refresh
-❯ tail -f FILE
+#ℹ︎ get/print/display watch <FILE> data in real time refresh
+❯ tail -f <FILE>
 ```
 
 

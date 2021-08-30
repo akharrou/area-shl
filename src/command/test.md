@@ -25,7 +25,7 @@ tags: [evaluates,tests,checks,conditions,expressions]
 
 ```bash
 #ℹ︎ test/check file conditional expressions
-❯ test -f FILE && echo true || echo false
+❯ test -f <FILE> && echo true || echo false
 ```
 
 

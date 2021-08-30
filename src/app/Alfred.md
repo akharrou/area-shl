@@ -32,7 +32,7 @@ tags: [application,file,launcher]
         [[ ! -f $DIR/$FILE ]] &&\
             touch $DIR/$FILE
 
-        <$SOURCE \
+        0<$SOURCE \
         /usr/local/bin/jq ’
         {
             items: .items | map({

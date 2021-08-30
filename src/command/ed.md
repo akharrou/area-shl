@@ -20,7 +20,7 @@ tags: [oldest,line,oriented,text,editor]
 ----
 #### To
 
-    ❯ ed FILE
+    ❯ ed <FILE>
 
 ## RECIPES
 

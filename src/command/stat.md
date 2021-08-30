@@ -23,7 +23,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display verbose, human readable, file/directory status information
-❯ stat -xt"%A, %B %d, %Y at %T %p GMT%Z" FILE
+❯ stat -xt"%A, %B %d, %Y at %T %p GMT%Z" <FILE>
 ```
 
       File: "file.txt"
@@ -40,7 +40,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display file/directory access datetime timestamp
-❯ stat -f%a FILE
+❯ stat -f%Sa <FILE>
 ```
 
     1597716191
@@ -48,7 +48,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display file/directory modification datetime timestamp
-❯ stat -f%m FILE
+❯ stat -f%Sm <FILE>
 ```
 
     1597716191
@@ -56,7 +56,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display file/directory change datetime timestamp
-❯ stat -f%c FILE
+❯ stat -f%Sc <FILE>
 ```
 
     1597716191
@@ -64,7 +64,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display file/directory birth/creation datetime timestamp
-❯ stat -f%B FILE
+❯ stat -f%SB <FILE>
 ```
 
     1597716191
@@ -72,7 +72,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display file/directory access/modification/change/birth/creation datetime, as human readable formatted datetime string
-❯ stat -f%SB -t"%A, %B %d, %Y at %T %p GMT%Z" FILE
+❯ stat -f%SB -t"%A, %B %d, %Y at %T %p GMT%Z" <FILE>
 ```
 
     Friday, August 13, 2021 at 11:25:04 AM GMT+03
@@ -80,7 +80,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display all file/directory dateimes: access, modified, change, and birth/creation, as formatted datetime string
-❯ stat -f"Access: %Sa%nModify: %Sm%nChange: %Sc%nCreate: %SB" -t"%A, %B %d, %Y at %T %p GMT%Z" FILE
+❯ stat -f"Access: %Sa%nModify: %Sm%nChange: %Sc%nCreate: %SB" -t"%A, %B %d, %Y at %T %p GMT%Z" <FILE>
 ```
 
     Access: Friday, August 13, 2021 at 11:28:48 AM GMT+03
@@ -94,7 +94,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ get/print/display symbolic link target file
-❯ stat -f%Y FILE
+❯ stat -f%Y <FILE>
 ```
 
     ❯ stat -f%Y /usr/local/Caskroom/iterm2/3.4.1/iTerm.app
@@ -108,7 +108,7 @@ tags: [get,print,display,files,folders,status,information]
 
 ```bash
 #ℹ︎ check/test file access/modification/change/birth datetime
-❯ (( `/usr/bin/stat -f "%m%n" FILE` < `date -v-1d +%s` )) && echo "Older than 1 day"
+❯ (( `/usr/bin/stat -f "%m%n" <FILE>` < `date -v-1d +%s` )) && echo "Older than 1 day"
 ```
 
 

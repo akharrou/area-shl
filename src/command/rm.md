@@ -23,7 +23,7 @@ tags: [remove,delete,files]
 
 ```bash
 #ℹ︎ delete/remove/erase file
-❯ rm FILE
+❯ rm <FILE>
 ```
 
 

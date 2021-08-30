@@ -93,6 +93,16 @@ tags: [shellscript,terminal,command,line,prompt,scripting,language]
 
     ❯ ( set -o noclobber; echo > my.lock ) || echo "Failed to create lock file"
 
+----
+#### To run useful checks:
+
+
+```bash
+#ℹ︎ check/test current shell program name
+❯ [[ ${SHELL##*/} = zsh ]]
+```
+
+
 ## RECIPIES
 
 ----
@@ -102,6 +112,23 @@ tags: [shellscript,terminal,command,line,prompt,scripting,language]
 
 - Prepending commands with `\` bypasses any aliases. E.g.: `\stat`, `\ls`.
 - Common dummy variables: foobar, foo, bar, baz, qux, quux, quuz, corge, grault, garply, waldo, fred, plugh
+
+----
+#### To use `$IFS` word/field splitting delimiters variable:
+
+
+```bash
+#ℹ︎ change and revert $IFS word/field splitting delimiters variable
+❯ OLDIFS=$IFS IFS=$’\n\r’ COMMAND && IFS=$OLDIFS
+```
+
+
+
+```bash
+#ℹ︎ change and revert $IFS word/field splitting delimiters variable
+❯ OLDIFS=$IFS IFS=$’\n\r’ ARRAY=(`COMMAND`) && IFS=$OLDIFS
+```
+
 
 
 ## NOTES
@@ -116,6 +143,7 @@ tags: [shellscript,terminal,command,line,prompt,scripting,language]
 8. Control operators
 9. Redirection operators
 10. Substitution operators
+*. Quoting
 
 ### Types
 
@@ -446,85 +474,85 @@ tags: [shellscript,terminal,command,line,prompt,scripting,language]
 
 ```bash
 #ℹ︎ check if file exists
-❯ if [[ -e FILE ]]; then …; fi
+❯ if [[ -e <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file has size greater than 0
-❯ if [[ -s FILE ]]; then …; fi
+❯ if [[ -s <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is readable
-❯ if [[ -r FILE ]]; then …; fi
+❯ if [[ -r <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is writable
-❯ if [[ -w FILE ]]; then …; fi
+❯ if [[ -w <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is executable
-❯ if [[ -x FILE ]]; then …; fi
+❯ if [[ -x <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is ordinary file
-❯ if [[ -f FILE ]]; then …; fi
+❯ if [[ -f <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is directory
-❯ if [[ -d FILE ]]; then …; fi
+❯ if [[ -d <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is block special file
-❯ if [[ -b FILE ]]; then …; fi
+❯ if [[ -b <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is character special file
-❯ if [[ -c FILE ]]; then …; fi
+❯ if [[ -c <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file set user ID (SUID) bits
-❯ if [[ -u FILE ]]; then …; fi
+❯ if [[ -u <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file set group ID (SGID) bits
-❯ if [[ -g FILE ]]; then …; fi
+❯ if [[ -g <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file set sticky bit
-❯ if [[ -k FILE ]]; then …; fi
+❯ if [[ -k <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file is named pipe
-❯ if [[ -p FILE ]]; then …; fi
+❯ if [[ -p <FILE> ]]; then …; fi
 ```
 
 
 ```bash
 #ℹ︎ check if file descriptor is open and terminal associated
-❯ if [[ -t FILE ]]; then …; fi
+❯ if [[ -t <FILE> ]]; then …; fi
 ```
 
 
@@ -733,16 +761,17 @@ References:
 
 ### Shell substitutions/expansions
 
-0. Special Parameters
-1. Brace substitution/expansion
-2. Tilde substitution/expansion
-3. Parameter substitution/expansion / variable substitution/expansion / string substitution/expansion
-4. Command substitution
-5. Process substitution
-6. Arithmetic substitution/expansion
-7. Word Splitting
-8. Filename substitution/expansion
-9. Quote Removal
+1. Special Parameters
+2. Brace substitution/expansion
+3. Glob pattern expansion
+4. Tilde substitution/expansion
+5. Parameter substitution/expansion / variable substitution/expansion / string substitution/expansion
+6. Command substitution
+7. Process substitution
+8. Arithmetic substitution/expansion
+9. Word Splitting
+10. Filename substitution/expansion
+11. Quote Removal
 
 #### Special parameters
 
@@ -798,6 +827,47 @@ References:
 References:
 
 - <https://www.gnu.org/software/bash/manual/bash.html#Brace-Expansion>
+
+### Glob Pattern Expansion
+
+| Syntax            | Semantics
+| ----------------- | -------------------------------------------------------
+| Basic Glob ||
+| `*`               | Matches any string, including the null string
+| `?`               | Matches any single character
+| `[abc]`           | Matches any of the contained characters
+| `[a-z]`           | Matches any of character within range (A-Za-z0-9)
+| `[!abc]`          | Matches any of character not contained between brackets
+| `[!a-z]`          | Matches any of character not within range (A-Za-z0-9)
+| Glob star `^[1]` ||
+| `**/*`            | Matches files within directories recursively
+| Extended Glob `^[2]` ||
+| `*(pattern-list)` | Matches zero or more occurrences of patterns
+| `?(pattern-list)` | Matches zero or one occurrence of patterns
+| `+(pattern-list)` | Matches one or more occurrences of patterns
+| `@(pattern-list)` | Matches one of patterns
+| `!(pattern-list)` | Matches anything except one of patterns
+| `[:CLASS:]`       | Matches characters included in character class
+
+    [1]: `bash` requires setting options: `shopt -s globstar`
+    [2]: only works for bash shell. also, setting the `extglob` option is required: `shopt -s extglob`
+
+| Character Class  | Description
+| ---------------- | ----------------------------------- |
+| digit            | digit characters                    |
+| alpha            | alphabetical characters             |
+| alnum            | alphabetical characters and digits  |
+| lower            | lowercase alphabetical characters   |
+| upper            | uppercase alphabetical characters   |
+| print            | printable characters (ASCII 32-126) |
+| word             | letters, digits and `_`             |
+| punct            | punctuation characters              |
+| ascii            | ascii characters                    |
+| cntrl            | control characters                  |
+| blank            | -                                   |
+| space            | -                                   |
+| graph            | -                                   |
+| xdigit           | -                                   |
 
 #### Tilde Expansion
 
@@ -1071,6 +1141,19 @@ TODO
     ❯ echo /etc/hos*
     /etc/hosts /etc/hosts.equiv
 
+### Quoting
+
+| Syntax | Semantics
+| - | -
+|`\` | escape character. preserves literal value of character directly after it, except newline
+| `’STRING’` | single quoted strings preserve literal value of all contained characters. single quotes can’t appear in string, even if escaped
+| `"STRING"` | double quoted strings preserve literal value of all contained characters except: `$`, `` ` ``, `\`, `!`, unless they are escaped with backslash (e.g. `"36\$ \!"`). double quote character can appear within string if escaped (e.g. `"\"John\""`)
+| `$’STRING’` | word expands to `STRING`, with backslash-escaped characters replaced as specified by the ANSI C standard
+| `$"STRING"` | causes the `STRING` to be translated according to the current locale
+
+>- behavior is mostly the same between `zsh` and `bash`, but does differ is some details.
+>- for `$’STRING’`, see exact expansion mapping here: <https://www.gnu.org/software/bash/manual/bash.html#ANSI_002dC-Quoting>
+
 ### Prompt Customization
 
 When executing interactively, bash displays the primary prompt `PS1` when it is ready to read a command, and the secondary prompt `PS2` when it needs more input to complete a command. Bash displays `PS0` after it reads a command but before executing it. Bash displays `PS4` as described above before tracing each command when the `-x` option is enabled. Bash allows these prompt strings to be customized by inserting a number of backslash-escaped special characters that are decoded as follows:
@@ -1123,46 +1206,11 @@ When executing interactively, bash displays the primary prompt `PS1` when it is 
 
 Shells can be any one of the two combinations of attributes: interactive login shells (the ones you use), interactive non-login shells (sub-shells within login shells), non-interactive login shells
 
-### Pattern matching
-
-| Syntax            | Semantics                                             |
-| ----------------- | ----------------------------------------------------- |
-| `*`               | Matches any string, including the null string         |
-| `?`               | Matches any single character                          |
-| `**/*`            | Matches any directory and sub-directory               |
-| `[…]`             | Matches any of the contained characters               |
-| `[:CLASS:]`       | Matches characters included in character class `^[1]` |
-| `?(pattern-list)` | Matches zero or one occurrence of patterns `^[2]`     |
-| `*(pattern-list)` | Matches zero or more occurrences of patterns `^[2]`   |
-| `+(pattern-list)` | Matches one or more occurrences of patterns `^[2]`    |
-| `@(pattern-list)` | Matches one of patterns `^[2]`                        |
-| `!(pattern-list)` | Matches anything except one of patterns `^[2]`        |
-
-    [1]: character classes
-    [2]: requires the `extglob` shell option be set via `shopt`
-
-| Class  | Description                         |
-| ------ | ----------------------------------- |
-| digit  | digit characters                    |
-| alpha  | alphabetical characters             |
-| alnum  | alphabetical characters and digits  |
-| lower  | lowercase alphabetical characters   |
-| upper  | uppercase alphabetical characters   |
-| print  | printable characters (ASCII 32-126) |
-| word   | letters, digits and `_`             |
-| punct  | punctuation characters              |
-| ascii  | ascii characters                    |
-| cntrl  | control characters                  |
-| blank  | -                                   |
-| space  | -                                   |
-| graph  | -                                   |
-| xdigit | -                                   |
-
 ## ENVIRONMENT
 
 Variable | Description
 - | -
-`$IFS`| Recognized word delimiters.
+`$IFS`| Recognized word delimiters for shell word/field splitting logic.
 
 ## PATHS
 

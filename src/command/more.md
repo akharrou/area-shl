@@ -51,7 +51,7 @@ The `-n` and `-v` options are non-standard and their use in scripts is not recom
 ----
 #### To
 
-    ❯ more FILE
+    ❯ more <FILE>
 
 
 ## NOTES

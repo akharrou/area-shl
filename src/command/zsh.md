@@ -129,58 +129,10 @@ tags: [unix,interactive,shell,command,interpreter,prompt,script,processor,progra
     alias zshrc="$EDITOR $ZSHRC"
     alias sz="source $ZSHRC"
 
-## EXTRAS
+## VARIABLES
 
-    if [[ $SHELL = *zsh ]]; then
-
-        unalias run-help
-        autoload -U run-help
-
-        # this is necessary because 'w' is a command
-        bindkey '^[w' backward-delete-word
-
-        # FIXES TERMINAL KEYS; THIS IS BECAUSE WE HAVE TO REMAP CERTAIN KEY PRESSES IN ITERM SETTINGS SO THAT VIM CAN UNDERSTAND THEM
-        bindkey \^U backward-kill-line
-        bindkey '^[9' backward-kill-line
-        bindkey '^[[1;3C' forward-word
-        bindkey '^[[1;3D' backward-word
-        bindkey '^[$a' end-of-line
-        bindkey '^[0i' beginning-of-line
-        bindkey '^[[45;5u' undo
-        bindkey '^[z' undo
-        bindkey '^[Z' redo
-
-        # bindkey '^[x' cut
-
-        # bindkey '^[c' copy
-        # x-copy-region-as-kill () {
-        #     zle copy-region-as-kill
-        #     print -rn $CUTBUFFER | pbcopy
-        # }
-        # x-kill-region () {
-        #     zle kill-region
-        #     print -rn $CUTBUFFER | pbcopy
-        # }
-        # x-yank () {
-        #     zle yank-pop
-        #     print $CUTBUFFER | pbcopy
-        # }
-
-        # zle -N x-copy-region-as-kill
-        # zle -N x-kill-region
-        # zle -N x-yank
-        # bindkey -e '\ew' x-copy-region-as-kill
-        # bindkey -e '^W' x-kill-region
-        # bindkey -e '\eC' x-yank
-
-        # bindkey '^[v' paste
-
-        # ! TODO change alt+[left|right] to jump to end|beginning of word, not to next one
-
-        # ctrl+l --> clears the screen
-        # alt+l (capslock+l) --> does 'ls' automatically
-
-    fi
+    # characters included as part of words
+    WORDCHARS='*?_~&;!#$%^<>'  # '=-[](){}'
 
 
 ## NOTES
@@ -188,6 +140,13 @@ tags: [unix,interactive,shell,command,interpreter,prompt,script,processor,progra
 ### Extension Modules
 
 For zsh extension modules, see files: `./zsh-*`.
+
+## SHORTCUTS
+
+Key | Action
+- | -
+++ctrl+l++ | Clears screen.
+++alt+l++ | Runs `ls`.
 
 ## ENVIRONMENT
 
@@ -235,3 +194,4 @@ Path | Description
 - [🌎 Home](https://zsh.sourceforge.io/)
 - [🌎 Documentation](https://zsh.sourceforge.io/Doc/Release/)
 - [🌎 Repository](https://github.com/zsh-users/zsh)
+- [🌎 Page: Configurations Inspiration (1)](https://gist.github.com/chriscchau/5829283)

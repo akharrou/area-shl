@@ -23,17 +23,17 @@ tags: [convert,tabs,to,from,spaces]
 
 ```bash
 #ℹ︎ convert text file tabs to spaces
-❯ expand -t4 FILE
+❯ expand -t4 <FILE>
 ```
 
 
 ```bash
 #ℹ︎ convert text file spaces to tabs
-❯ unexpand -t4 FILE
+❯ unexpand -t4 <FILE>
 ```
 
 
-    ❯ cat FILE | expand -t4
+    ❯ cat <FILE> | expand -t4
 
 
 ## SEE

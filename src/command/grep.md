@@ -20,12 +20,12 @@ tags: [search,matching,regular,expression,regex,pattern,text,files,lines]
 ----
 #### To search a file for a pattern:
 
-    ❯ grep PATTERN FILE
+    ❯ grep PATTERN <FILE>
 
 ----
 #### To perform a case-insensitive search (with line numbers):
 
-    ❯ grep -in PATTERN FILE
+    ❯ grep -in PATTERN <FILE>
 
 ----
 #### To recursively grep for string PATTERN in DIR:
@@ -35,21 +35,21 @@ tags: [search,matching,regular,expression,regex,pattern,text,files,lines]
 ----
 #### To read search patterns from a file (one per line):
 
-    ❯ grep -f PATTERN-FILE FILE
+    ❯ grep -f PATTERN-FILE <FILE>
 
 ----
 #### To find lines NOT containing pattern:
 
-    ❯ grep -v PATTERN FILE
+    ❯ grep -v PATTERN <FILE>
 
 ----
 #### To grep with regular expressions:
 
     # Match lines starting with 00
-    ❯ grep "^00" FILE
+    ❯ grep "^00" <FILE>
 
     # Find IP add
-    ❯ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" FILE
+    ❯ grep -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" <FILE>
 
 ----
 #### To find all files that match PATTERN in DIR
@@ -65,6 +65,25 @@ tags: [search,matching,regular,expression,regex,pattern,text,files,lines]
 #### To colour in red {bash} and keep all other lines
 
     ❯ ps aux | grep -E --color "bash|$"
+
+## RECIPES
+
+----
+#### Useful miscellaneous commands:
+
+
+```bash
+#ℹ︎ get/print/display lookup result port name mapping
+❯ grep --extended-regexp "^http\s" /etc/services
+```
+
+
+
+```bash
+#ℹ︎ get/print/display lookup result of port number mapping
+❯ grep --extended-regexp --word-regexp "22/(tcp|udp)" /etc/services
+```
+
 
 
 ## PROCEDURES

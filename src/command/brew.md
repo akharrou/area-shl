@@ -542,6 +542,8 @@ Note you cannot pin casks (native applications) because a huge number of them au
 ```
 
 
+For casks, `brew` might need user account password. If you want to be prompted on a graphical window, instead of via terminal, you can setup `sudo`’s helper `askpass` program and set the environment variable, `SUDO_ASKPASS`, to its path.
+
 ----
 #### To manage MacOS installations (formulae, casks, taps, apps, services, etc), with `brew bundle` and its `Brewfile`:
 
@@ -622,9 +624,9 @@ To specify `Brewfile` path, either: set `HOMEBREW_BUNDLE_FILE` with specified lo
 ## INIT
 
     eval "$(brew shellenv)"
-    # export HOMEBREW_PREFIX="/usr/local";
-    # export HOMEBREW_CELLAR="/usr/local/Cellar";
-    # export HOMEBREW_REPOSITORY="/usr/local/Homebrew";
+    # export HOMEBREW_PREFIX="/usr/local"
+    # export HOMEBREW_CELLAR="/usr/local/Cellar"
+    # export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
     # export PATH="/usr/local/bin:/usr/local/sbin${PATH+:$PATH}";
     # export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:";
     # export INFOPATH="/usr/local/share/info:${INFOPATH:-}";
@@ -632,7 +634,7 @@ To specify `Brewfile` path, either: set `HOMEBREW_BUNDLE_FILE` with specified lo
     export HOMEBREW_LOGS="${XDG_CACHE_HOME:-"~/.cache"}/brew/logs"
 
     # shell completion (https://docs.brew.sh/Shell-Completion)
-    # if [[ $SHELL = *bash ]]; then
+    # if [[ ${SHELL##*/} = bash ]]; then
     #     if type brew &>/dev/null; then
     #         HOMEBREW_PREFIX="$(brew --prefix)"
     #         if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]];
@@ -645,7 +647,7 @@ To specify `Brewfile` path, either: set `HOMEBREW_BUNDLE_FILE` with specified lo
     #             done
     #         fi
     #     fi
-    # elif [[ $SHELL = *zsh ]]; then
+    # elif [[ ${SHELL##*/} = zsh ]]; then
     #     FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
     #     autoload -Uz compinit
     #     compinit

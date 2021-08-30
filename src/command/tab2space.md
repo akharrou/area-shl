@@ -23,13 +23,13 @@ tags: [expand,tabs,tabulations,to,spaces,set,line,endings]
 
 ```bash
 #ℹ︎ convert/expand text file tabs to spaces
-❯ tab2space -t2 FILE
+❯ tab2space -t2 <FILE>
 ```
 
 
 ```bash
 #ℹ︎ convert/set line endings to specified type [unix|mac|dos]
-❯ tab2space -unix FILE
+❯ tab2space -unix <FILE>
 ```
 
 

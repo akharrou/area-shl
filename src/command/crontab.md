@@ -23,7 +23,7 @@ tags: [execute,run,datetime,scheduled,manage,edit,recurring,time,command,cron,jo
 
 ```bash
 #ℹ︎ setup/add/load/install crontab from file
-❯ crontab FILE
+❯ crontab <FILE>
 ```
 
 

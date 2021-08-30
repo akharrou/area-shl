@@ -16,6 +16,12 @@ tags: [collections,utilities,commands,directory,searching]
 
 
 
+## INIT
+
+    # All commands have been installed with the prefix "g". If you need to use these commands with their normal names, you can add a "gnubin" directory to your `$PATH`, in one of your shell initialization files:
+    PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+
 ## SEEALSO
 
     coreutils, moreutils

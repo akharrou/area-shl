@@ -32,15 +32,10 @@ Formats and prints arguments.
 
 
 ```bash
-#ℹ︎ convert ascii code, get/print/display ascii character representation
-❯ printf \\x61
-```
-
-
-```bash
 #ℹ︎ convert ascii character, get/print/display ascii code representation
 ❯ printf %d \’a
 ```
+
 
 
 ```bash
@@ -49,11 +44,21 @@ Formats and prints arguments.
 ```
 
 
+
 ```bash
 #ℹ︎ convert ascii character, get/print/display ascii code representation
 ❯ printf %o \’a
 ```
 
+
+
+```bash
+#ℹ︎ convert ascii code, get/print/display ascii character representation
+❯ printf \\x61
+```
+
+    ❯ for i in {20..126}; do printf \\x`bc <<< "obase=16; $i"`; done
+     !"#$%&’()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 
 
 ## SEE

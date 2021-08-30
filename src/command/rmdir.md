@@ -34,6 +34,11 @@ tags: [remove,folders,directory,directories]
 
 
 
+## ALIASES
+
+    alias rd=rmdir
+
+
 ## SEE
 
     rmdir(1)

@@ -107,7 +107,7 @@ Some helpful tables:
 
 Path | Description
 - | -
-`/etc/profile` | system wide `umask` configuration location
+`/etc/profile` | System wide `umask` configuration location. Currently placed in `/etc/zshenv`.
 
 ## SEE
 

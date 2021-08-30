@@ -37,8 +37,10 @@ tags: [get,print,display,list,folders,directories,files,information]
 
 ## ALIASES
 
-    # alias l="ls -l"
-    # alias ll="ls -la"
+    alias l='ls -lah'
+    alias ll='ls -lh'
+    alias la='ls -lAh'
+    alias lsa='ls -lah'
 
 
 ## NOTES

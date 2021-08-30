@@ -23,7 +23,7 @@ tags: [broadcast,write,send,message,to,all,logged-in,users,groups,terminals,devi
 
 ```bash
 #ℹ︎ broadcast/write/send message to all logged-in users, from file
-❯ wall FILE
+❯ wall <FILE>
 ```
 
 

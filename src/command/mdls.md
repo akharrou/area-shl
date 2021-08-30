@@ -27,13 +27,13 @@ Lists metadata information attributes for given files.
 
 ```bash
 #ℹ︎ get/print all file spotlight metadata information attributes and their value
-❯ mdls FILE
+❯ mdls <FILE>
 ```
 
 
 ```bash
 #ℹ︎ get/print matching file spotlight metadata information attribute value, without field
-❯ mdls -raw -name ATTRIBUTE FILE
+❯ mdls -raw -name ATTRIBUTE <FILE>
 ```
 
 

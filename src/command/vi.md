@@ -23,7 +23,7 @@ tags: [text,editor]
 
 ```bash
 #ℹ︎ edit file
-❯ vi FILE
+❯ vi <FILE>
 ```
 
 

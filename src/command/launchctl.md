@@ -28,9 +28,9 @@ tags: [control,manage,interface,launchd]
 ----
 #### To load/unload `launchd` scripts:
 
-    ❯ sudo cp FILE.plist /Library/Daemons/
-    ❯ sudo launchctl load /Library/LaunchDaemons/FILE.plist
-    ❯ sudo launchctl unload /Library/LaunchDaemons/FILE.plist
+    ❯ sudo cp <FILE>.plist /Library/Daemons/
+    ❯ sudo launchctl load /Library/LaunchDaemons/<FILE>.plist
+    ❯ sudo launchctl unload /Library/LaunchDaemons/<FILE>.plist
 
 If `launchd` scripts are copied to `/Library/Daemons/`, they will automatically be loaded on next bootup, but for script to be in effect directly, you must manually load them, after adding them to the directory.
 

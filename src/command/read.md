@@ -94,7 +94,7 @@ Exit Status: the return code is zero, unless end-of-file is encountered, read ti
 
 ```bash
 #ℹ︎ read file one line at a time, line by line
-❯ while read line; do echo $line; done < FILE
+❯ while read line; do echo $line; done < <FILE>
 ```
 
     Samsung

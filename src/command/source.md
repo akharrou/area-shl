@@ -27,7 +27,7 @@ Read and execute shellscript files.
 
 ```bash
 #ℹ︎ read and execute commands from files
-❯ source FILE
+❯ source <FILE>
 ```
 
 
@@ -39,14 +39,14 @@ Read and execute shellscript files.
 
 ```bash
 #ℹ︎ read and execute commands from files
-❯ . FILE
+❯ . <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ ?
-❯ eval FILE
+❯ eval <FILE>
 ```
 
 

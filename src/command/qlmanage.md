@@ -27,7 +27,7 @@ Quick Look server debug and management tool.
 
 ```bash
 #ℹ︎ pop-up preview data files/images (via Apple’s QuickLook)
-❯ qlmanage -p FILE
+❯ qlmanage -p <FILE>
 ```
 
 

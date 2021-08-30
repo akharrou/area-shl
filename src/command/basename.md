@@ -49,7 +49,7 @@ tags: [convert,extract,get,print,display,path,file,part,portion,without,extensio
 ## PROCEDURES
 
     # ❯ filename PATH   # get/print/display filename without directory path or extensions
-    function filename()   # get/print/display filename without directory path or extensions
+    function filename()
     {
         local pth=$1
         basename ${pth/%.*/}

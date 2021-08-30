@@ -29,24 +29,33 @@ Options:
 ## USECASES
 
 ----
-#### To OCR pdfs:
+#### To optically recognize characters of specified PDFs:
 
-    ❯ ocrmypdf in.pdf out.pdf
 
-----
-#### To OCR images (at specific DPIs):
+```bash
+#ℹ︎ recognize PDF characters
+❯ ocrmypdf INFILE.pdf OUTFILE.pdf
+```
 
-    ❯ ocrmypdf --image-dpi 100 in.jpeg out.pdf
 
-----
-#### To OCR languages: english, french and arabic:
 
-    ❯ ocrmypdf -l eng+fra+ara in.pdf out.pdf
+```bash
+#ℹ︎ recognize PDF characters, at specific image dots per inch
+❯ ocrmypdf --image-dpi DPINUM IMAGE OUTFILE.pdf
+```
+
+
+
+```bash
+#ℹ︎ recognize PDF characters, of specified language
+❯ ocrmypdf --language eng+fra+ara INFILE.pdf OUTFILE.pdf
+```
+
 
 ----
 #### To OCR concatenated images:
 
-    ❯ img2pdf img1.jpeg img2.png img3.tiff img4.jpg > tmp.pdf; ocr tmp.pdf out.pdf ; rm tmp.pdf
+    ❯ img2pdf IMAGE.[jpg|png|tiff] > INFILE.pdf; ocrmypdf INFILE.pdf OUTFILE.pdf ; rm INFILE.pdf
 
 ## RECIPES
 

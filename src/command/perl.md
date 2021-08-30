@@ -78,49 +78,49 @@ tags: [language,interpreter,files,editor,inplace]
 
 ```bash
 #ℹ︎ add line before/above/atop specified file line number
-❯ perl -0pe ’print "TEXT\n" if $. == LINENUM’ FILE
+❯ perl -0pe ’print "TEXT\n" if $. == LINENUM’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ search/find and replace/change/substitute file line matching regex pattern
-❯ perl -0pe ’s/PCRE2/REPL/g;’ FILE
+❯ perl -0pe ’s/PCRE2/REPL/g;’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ search/find and replace/change/substitute, if specified file line number
-❯ perl -0pe ’s/PCRE2/REPL/g if $. == LINENUM;’ FILE
+❯ perl -0pe ’s/PCRE2/REPL/g if $. == LINENUM;’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ add line after/below/under specified file line number
-❯ perl -0ne ’print; print "TEXT\n" if $. == LINENUM’ FILE
+❯ perl -0ne ’print; print "TEXT\n" if $. == LINENUM’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ search/find and delete file line matching regex pattern
-❯ perl -0ne ’print unless /PCRE2/’ FILE
+❯ perl -0ne ’print unless /PCRE2/’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ delete specified file line number
-❯ perl -0ne ’print if $. != LINENUM’ FILE
+❯ perl -0ne ’print if $. != LINENUM’ <FILE>
 ```
 
 
 
 ```bash
 #ℹ︎ search/find and replace/change/substitute line matching regex pattern, and delete line matching regex pattern
-❯ perl -0ne ’s/PCRE2/REPL/g; print unless /PCRE2/;’ FILE
+❯ perl -0ne ’s/PCRE2/REPL/g; print unless /PCRE2/;’ <FILE>
 ```
 
 

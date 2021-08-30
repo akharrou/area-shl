@@ -29,7 +29,7 @@ tags: [calculate,compute,generate,produce,checksum,files,string,messages]
 
 ```bash
 #ℹ︎ compute/get/print MD5 cryptography message digest, from files
-❯ md5 -q FILE ...
+❯ md5 -q <FILE> ...
 ```
 
     e2876a4cecb829481c83c8f9e883f059

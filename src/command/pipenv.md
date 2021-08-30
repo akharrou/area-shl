@@ -37,7 +37,7 @@ If a virtualenv already exists, `pipenv` will remove it and create a new one, "r
 
     ❯ pipenv install   # `Pipfile.lock` & `Pipfile` packages under: `[packages]`
     ❯ pipenv install --dev   # `Pipfile.lock` & `Pipfile` packages under: `[packages]` & `[dev-packages]`
-    ❯ pipenv install -r FILE   # install packages specificied in `FILE` (e.g. `requirements.txt`)
+    ❯ pipenv install -r <FILE>   # install packages specificied in `<FILE>` (e.g. `requirements.txt`)
     ❯ pipenv install --skip-lock   # ignore `Pipfile.lock`, install just from `Pipfile`
     ❯ pipenv install --ignore-pipfile   # ignore `Pipfile`, install just from `Pipfile.lock`
 

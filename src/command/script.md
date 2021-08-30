@@ -23,7 +23,7 @@ tags: [make,create,start,terminal,session,recording,typescript]
 
 ```bash
 #ℹ︎ make/create/start terminal session typescript/recording, saved in specified file
-❯ script [FILE]
+❯ script [<FILE>]
 ```
 
     Script started, output file is typescript

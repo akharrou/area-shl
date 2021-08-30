@@ -45,6 +45,12 @@ Non-interactive text file editor. Reads specified files, or standard input, modi
     helloworld
 
 ----
+#### To edit files/standard-input:
+
+    ❯ sed LINESd
+    ❯ sed /EREGEX/
+
+----
 #### To print a newline in between lines:
 
 

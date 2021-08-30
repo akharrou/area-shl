@@ -23,7 +23,7 @@ tags: [spell,check,text,file]
 
 ```bash
 #ℹ︎ check/test and correct text file word spelling, interactively
-❯ aspell check FILE
+❯ aspell check <FILE>
 ```
 
 

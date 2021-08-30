@@ -163,6 +163,16 @@ Post-search actions:
         created    Sort by the creation time on a file. Single-threaded.
 
 ----
+#### To search through binary data:
+
+
+```bash
+#ℹ︎ regex pattern search through binary data files
+❯ rg --no-unicode --encoding=none --text PCRE
+```
+
+
+----
 #### To dumb down `ripgrep`:
 
 

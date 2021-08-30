@@ -23,7 +23,7 @@ tags: [create,change,modify,file,access,modification,timestamps]
 
 ```bash
 #ℹ︎ create new empty file, with specified name
-❯ touch FILE
+❯ touch <FILE>
 ```
 
 
@@ -33,7 +33,7 @@ tags: [create,change,modify,file,access,modification,timestamps]
 
 ```bash
 #ℹ︎ change/modify/edit file modification datetime, with specified datetime string
-❯ touch -mt CCYYMMDDhhmm.ss FILE
+❯ touch -mt CCYYMMDDhhmm.ss <FILE>
 ```
 
 

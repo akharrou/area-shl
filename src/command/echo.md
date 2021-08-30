@@ -60,6 +60,13 @@ tags: [get,print,display,text,on,to,screen]
     /sbin
 
 
+```bash
+#ℹ︎ substitute get/print/display literal string
+❯ echo ${$(echo "/usr/local/bin")##*/}
+```
+
+
+
 ## SEE
 
     echo(1)

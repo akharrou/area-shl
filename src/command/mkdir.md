@@ -60,7 +60,8 @@ tags: [make,create,new,directories,folders]
 
 ## ALIASES
 
-    alias mkdir="mkdir -p"   # create entire path
+    # create entire path
+    alias md='mkdir -p'
 
 ## PROCEDURES
 

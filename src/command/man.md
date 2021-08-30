@@ -53,7 +53,11 @@ Formats and displays manual pages.
 
 ## ALIASES
 
-    manf()
+    # alias manpaths='echo -e ${MANPATH//:/\\n}'
+
+## PROCEDURES
+
+    function manf()
     {
         if [[ $1 ]]; then
             env MANPAGER="\
@@ -67,13 +71,33 @@ Formats and displays manual pages.
         fi
     }
 
+    # searches  directories in `$manpath` for man pages whose names contain `$1`
+    function manpaths()
+    {
+        [[ ! -o nonomatch ]] && setopt nonomatch
+
+        if (($# == 0))
+        then
+            echo $manpath | tr " " "\012"
+        else
+            for dir in $manpath
+            do
+                for subdir in $dir/man* $dir/cat*
+                do
+                    /bin/ls -l $subdir/*$1*
+                done
+            done |& egrep -v '([Nn]o(t found| such|t a))'
+        fi
+    }
+
 
 ## PATHS
 
 Path | Description
 - | -
-`/etc/manpaths, /etc/manpaths.d/` | Manual pages path configuration file/directory. This file, and the files in the `.d/` directory, are sourced during the initialization process of login shells.
-`/usr/share/man/, /usr/local/man/` | Directory containing system’s manual pages.
+`/etc/manpaths[.d/]` | Manual pages path configuration file/directory. This file, and the files in the `.d/` directory, are sourced during the initialization process of login shells.
+`/usr/local/man/` | Directory containing system’s manual pages.
+`/usr/share/man/` | Directory containing system’s manual pages.
 `/usr/local/share/man/` | Directory containg manual pages of unbundled software.
 
 ## SEE

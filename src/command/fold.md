@@ -23,17 +23,17 @@ tags: [wrap,file,text,fit,specified,width]
 
 ```bash
 #ℹ︎ wrap text file to 80 columns line width
-❯ fold -s -w80 FILE
+❯ fold -s -w80 <FILE>
 ```
 
 
 ```bash
 #ℹ︎ wrap text file to fit specified columns line width
-❯ fold -s -w 120 FILE
+❯ fold -s -w 120 <FILE>
 ```
 
 
-    ❯ fold -s < FILE
+    ❯ fold -s < <FILE>
     ❯ cat INFILE | fold -s >OUTFILE
 
 The `-s` option ensures that lines are folded on whitespaces.

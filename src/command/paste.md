@@ -64,7 +64,7 @@ tags: [merge,join,interweave,interpose,concatenate,files,lines]
 
 ```bash
 #ℹ︎ concatenate/merge/join (two) subsequent lines of files, with specified seperator/delimiter
-❯ cat FILE | paste -d "\t" - -
+❯ cat <FILE> | paste -d "\t" - -
 ```
 
     Line 1 Line 2

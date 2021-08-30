@@ -34,7 +34,7 @@ The `find` utility recursively descends the directory tree for each path listed,
 
 ```bash
 #ℹ︎ search/find, get/print/display, files/directories, with matching filetype and extended case-insensitive regex pattern
-❯ find -E SEARCHPATH -type FILETYPE -iregex ERE -print
+❯ find -E SEARCHPATH -type FILETYPE -iregex EREGEX -print
 ```
 
 
@@ -100,7 +100,7 @@ Other ways to find files:
 
 ```bash
 #ℹ︎ search/find files/directories, execute/run commands on each found
-❯ find -E SEARCHPATH -type FILETYPE -iregex ERE \
+❯ find -E SEARCHPATH -type FILETYPE -iregex EREGEX \
 	-exec echo {} \; \
 	-exec basename {} \; \
 	-exec dirname {} \;
@@ -110,7 +110,7 @@ Other ways to find files:
 
 ```bash
 #ℹ︎ search/find files/directories, execute/run commands/script on each found
-❯ find -E SEARCHPATH -type FILETYPE -iregex ERE \
+❯ find -E SEARCHPATH -type FILETYPE -iregex EREGEX \
 -exec sh -c "
 	path={}
 	basename=`basename {}`
@@ -130,7 +130,7 @@ Other ways to find files:
 
 ```bash
 #ℹ︎ search/find files/directories, execute/run commands on found batch
-❯ find -E SEARCHPATH -type FILETYPE -iregex ERE \
+❯ find -E SEARCHPATH -type FILETYPE -iregex EREGEX \
 	-exec echo {} \+ \
 	-exec cat {} \+
 ```

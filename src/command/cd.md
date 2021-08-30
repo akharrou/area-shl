@@ -15,20 +15,35 @@ tags: [change,current,present,working,directory]
 ```
 
 
+## RECIPES
+
+----
+#### Miscellaneous:
+
+
+```bash
+#ℹ︎ change directory location/path, else exit/quit/return
+❯ cd PATH || exit 1
+```
+
+
 
 ## ALIASES
 
-    alias ..="cd .." # 1
-    alias ...="cd ../.." # 2
-    alias ....="cd ../../.." # 3
-    alias .....="cd ../../../.." # 4
-    alias ......="cd ../../../../.." # 5
-    alias .......="cd ../../../../../.." # 6
-    alias ........="cd ../../../../../../.." # 7
-    alias .........="cd ../../../../../../../.." # 8
-    alias ..........="cd ../../../../../../../../.." # 9
+    if [[ ${SHELL##*/} = zsh ]]; then
+        alias -g ..=".." # 1
+        alias -g ...="../.." # 2
+        alias -g ....="../../.." # 3
+        alias -g .....="../../../.." # 4
+        alias -g ......="../../../../.." # 5
+        alias -g .......="../../../../../.." # 6
+        alias -g ........="../../../../../../.." # 7
+        alias -g .........="../../../../../../../.." # 8
+        alias -g ..........="../../../../../../../../.." # 9
+    fi
 
     # `dirs`
+    alias -- -='cd -'
     alias "1"="cd -1"   && alias "61"="cd -61"
     alias "2"="cd -2"   && alias "62"="cd -62"
     alias "3"="cd -3"   && alias "63"="cd -63"

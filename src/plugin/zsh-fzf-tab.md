@@ -54,13 +54,6 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
 
     plugins+=(fzf-tab)
 
-    zstyle ':completion:*' verbose yes
-    zstyle ':completion:*:descriptions' format '[%d]'
-    zstyle ':completion:*:messages' format '%d'
-    zstyle ':completion:*:warnings' format 'No matches for: %d'
-    zstyle ':completion:*' group-name
-    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
 ## VARIABLES
 
     FZF_TAB_GROUP_COLORS=(
@@ -83,7 +76,7 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
     zstyle ':fzf-tab:*' default-color $'\033[37m'
     zstyle ':fzf-tab:*' group-colors $FZF_TAB_GROUP_COLORS
     zstyle ':fzf-tab:*' show-group full # [full|brief|none]
-    zstyle ':fzf-tab:*' single-group prefix # [prefix|color|header]
+    zstyle ':fzf-tab:*' single-group header # [prefix|color|header]
     zstyle ':fzf-tab:*' switch-group 'alt-"' "alt-'" # [,|.|'|/|...]
     zstyle ':fzf-tab:*' prefix '· '$'\033[37m' # item list prefix
 
@@ -105,17 +98,10 @@ Replace zsh’s default tab completion selection menu with `fzf`’s search and 
     zstyle ':fzf-tab:complete:cd:*' fzf-flags \
         '--preview-window=right,50%,wrap,nofollow,cycle,nohidden,~1' \
 
-    zstyle ':completion:*:git-checkout:*' sort false # disable sort when completing `git checkout`
     zstyle ':fzf-tab:complete:git:*' fzf-preview ''
     zstyle ':fzf-tab:complete:git:*' fzf-flags \
         '--preview-window=right,50%,wrap,nofollow,cycle,hidden' \
 
-
-## NOTES
-
-You can include hidden files in completions with:
-
-    _comp_options+=(globdots)
 
 ## PATHS
 

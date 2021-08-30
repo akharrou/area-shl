@@ -23,7 +23,7 @@ tags: [converts,rfc,xml,source,to,text,html,pdf]
 
 ```bash
 #ℹ︎ convert RFC XML files to presentation documents
-❯ xml2rfc --verbose --table-borders=full --no-pagination --v3 --text --html FILE.rfc3.xml
+❯ xml2rfc --verbose --table-borders=full --no-pagination --v3 --text --html <FILE>.rfc3.xml
 ```
 
 

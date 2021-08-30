@@ -148,8 +148,8 @@ Flag                 | Meaning
 
 ## ALIASES
 
-    alias l="exa"
-    alias ll="exa --long"
+    # alias l="exa"
+    # alias ll="exa --long"
     alias lll="exa --long --extended"
 
     alias t="exa --tree"
@@ -206,7 +206,7 @@ Variable | Description
 
 ## SEEALSO
 
-    ls, ansi-escape-code
+    ls(1), tree(1), broot(1), ranger(1), lf, nnn(1),
 
 ## SEEFURTHER
 

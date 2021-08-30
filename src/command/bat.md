@@ -27,7 +27,7 @@ Clone of cat(1) with syntax highlighting and Git integration.
 
 ```bash
 #ℹ︎ print/display/list/page file contents
-❯ bat FILE ...
+❯ bat <FILE> ...
 ```
 
 
@@ -37,25 +37,25 @@ Clone of cat(1) with syntax highlighting and Git integration.
 
 ```bash
 #ℹ︎ display/print file with grid, and line numbers
-❯ bat FILE
+❯ bat <FILE>
 ```
 
 
 ```bash
 #ℹ︎ display/print file without grid, and with line numbers
-❯ bat -n FILE
+❯ bat -n <FILE>
 ```
 
 
 ```bash
 #ℹ︎ display/print plain file, with automatic paging
-❯ bat -p FILE
+❯ bat -p <FILE>
 ```
 
 
 ```bash
 #ℹ︎ display/print plain file, without automatic paging
-❯ bat -pp FILE
+❯ bat -pp <FILE>
 ```
 
 
@@ -88,7 +88,7 @@ Clone of cat(1) with syntax highlighting and Git integration.
 
 ```bash
 #ℹ︎ quickly fuzzy preview bat themes
-❯ bat --list-themes | fzf -q "Theme: " -d: --preview="bat --theme={2} --color=always FILE"
+❯ bat --list-themes | fzf -q "Theme: " -d: --preview="bat --theme={2} --color=always <FILE>"
 ```
 
 

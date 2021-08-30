@@ -23,7 +23,7 @@ tags: [print,files]
 
 ```bash
 #ℹ︎ send file print jobs, to specified destination printer
-❯ lpr -P PRINTER FILE
+❯ lpr -P PRINTER <FILE>
 ```
 
 

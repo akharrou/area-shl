@@ -23,19 +23,19 @@ tags: [get,print,display,list,concatenate,files,contents]
 
 ```bash
 #ℹ︎ print/display files
-❯ cat FILE
+❯ cat <FILE>
 ```
 
 
 ```bash
 #ℹ︎ print/display files, with numbered lines
-❯ cat -n FILE
+❯ cat -n <FILE>
 ```
 
 
 ```bash
 #ℹ︎ print/display files, with numbered non-empty lines
-❯ cat -b FILE
+❯ cat -b <FILE>
 ```
 
 

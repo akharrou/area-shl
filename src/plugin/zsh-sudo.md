@@ -80,9 +80,9 @@ tags: [zsh,zshell,shell,plugin,prepend,command,sudo]
     zle -N sudo-command-line
 
     # Defined shortcut keys to: <Esc+Esc>
-    bindkey -M emacs '\e\e' sudo-command-line
-    bindkey -M vicmd '\e\e' sudo-command-line
-    bindkey -M viins '\e\e' sudo-command-line
+    bindkey -M emacs "$KEY_ESC$KEY_ESC" sudo-command-line
+    bindkey -M vicmd "$KEY_ESC$KEY_ESC" sudo-command-line
+    bindkey -M viins "$KEY_ESC$KEY_ESC" sudo-command-line
 
 
 ## SHORTCUTS

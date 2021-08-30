@@ -23,7 +23,7 @@ tags: [get,print,display,determine,file,mime,types,information]
 
 ```bash
 #ℹ︎ determine get/print/display files mime types information
-❯ file FILE.html
+❯ file <FILE>.html
 ```
 
     FILE.html: HTML document text, UTF-8 Unicode text, with very long lines
@@ -31,7 +31,7 @@ tags: [get,print,display,determine,file,mime,types,information]
 
 ```bash
 #ℹ︎ determine get/print/display files mime types information, without filename header
-❯ file --brief FILE.html
+❯ file --brief <FILE>.html
 ```
 
     HTML document text, UTF-8 Unicode text, with very long lines

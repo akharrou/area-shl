@@ -20,7 +20,7 @@ tags: [split,break,divide,chop,cleave,file,into,across,pieces,files]
 ----
 #### To split/break/divide/chop/cleave file into/across pieces (other files):
 
-    ❯ split -a5 -b BYTES[m|k] FILE SUFFIX
+    ❯ split -a5 -b BYTES[m|k] <FILE> SUFFIX
 
 ```bash
 #ℹ︎ split/divide file into pieces, at every specified number of bytes
@@ -28,7 +28,7 @@ tags: [split,break,divide,chop,cleave,file,into,across,pieces,files]
 ```
 
 
-    ❯ split -a5 -l LINES FILE SUFFIX
+    ❯ split -a5 -l LINES <FILE> SUFFIX
 
 ```bash
 #ℹ︎ split/divide file into pieces, at every specified number of lines
@@ -36,7 +36,7 @@ tags: [split,break,divide,chop,cleave,file,into,across,pieces,files]
 ```
 
 
-    ❯ split -a5 -p PATTERN FILE SUFFIX
+    ❯ split -a5 -p PATTERN <FILE> SUFFIX
 
 ```bash
 #ℹ︎ split/divide file into pieces, at every specified pattern

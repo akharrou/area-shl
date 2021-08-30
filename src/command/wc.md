@@ -20,13 +20,13 @@ tags: [count,get,print,display,files,bytes,characters,words,lines]
 ----
 #### To get/print/display total standard-input/file bytes/characters/words/lines:
 
-    ❯ cat FILE | wc -mwl
+    ❯ cat <FILE> | wc -mwl
         1176    6963   51503
 
 
 ```bash
 #ℹ︎ get/print/display total standard-input/file bytes
-❯ cat FILE | wc -c | bc
+❯ cat <FILE> | wc -c | bc
 ```
 
     51503
@@ -34,7 +34,7 @@ tags: [count,get,print,display,files,bytes,characters,words,lines]
 
 ```bash
 #ℹ︎ get/print/display total standard-input/file characters
-❯ cat FILE | wc -m | bc
+❯ cat <FILE> | wc -m | bc
 ```
 
     51503
@@ -42,7 +42,7 @@ tags: [count,get,print,display,files,bytes,characters,words,lines]
 
 ```bash
 #ℹ︎ get/print/display total standard-input/file words
-❯ cat FILE | wc -w | bc
+❯ cat <FILE> | wc -w | bc
 ```
 
     6963
@@ -50,7 +50,7 @@ tags: [count,get,print,display,files,bytes,characters,words,lines]
 
 ```bash
 #ℹ︎ get/print/display total standard-input/file lines
-❯ cat FILE | wc -l | bc
+❯ cat <FILE> | wc -l | bc
 ```
 
     1176

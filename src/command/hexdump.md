@@ -1,10 +1,10 @@
 ---
 status: TODO
-title: hexdunmp
+title: hexdump
 tags: [display,file,memory,bytes,format,ascii,binary,decimal,hexadecimal]
 ---
 
-# `hexdunmp`
+# `hexdump`
 
 ## BRIEF
 
@@ -15,7 +15,7 @@ The hexdump utility is a filter which displays the specified files, or the stand
  
 ```bash
 #ℹ︎ installation
-❯ *hexdunmp comes pre-installed*
+❯ *hexdump comes pre-installed*
 ```
 
 
@@ -26,17 +26,28 @@ The hexdump utility is a filter which displays the specified files, or the stand
 
 
 ```bash
-#ℹ︎ view memory bytes and human readable ascii characters
-❯ hexdump -C file
+#ℹ︎ convert/create/make get/print/display stdin/file/string to hex dump
+❯ hexdump <(echo -n "Hello, world")
 ```
 
+    0000000 48 65 6c 6c 6f 2c 20 77 6f 72 6c 64 20 21
+    000000e
+
+
+```bash
+#ℹ︎ convert/create/make get/print/display stdin/file/string to hex dump, view memory octets/bytes, with  human readable ascii characters contents
+❯ hexdump -C <(echo -n "Hello, world")
+```
+
+    00000000  48 65 6c 6c 6f 2c 20 77  6f 72 6c 64 20 21        |Hello, world !|
+    0000000e
 
 
 ## PROCEDURES
 
     # TODO: add preview; shows file at line of ascii characters
-    # ❯ hd   # print/display file memory bytes and human readable ascii characters
-    function hd()   # print/display file memory bytes and human readable ascii characters
+    # ❯ hd   # print/display file memory octets/bytes and human readable ascii characters
+    function hd()   # print/display file memory octets/bytes and human readable ascii characters
     {
         if [[ $# -ne 0 ]]; then
             hexdump -C $@ \

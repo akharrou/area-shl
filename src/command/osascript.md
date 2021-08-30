@@ -126,6 +126,10 @@ The target must be a folder/directory. The alias will have the same name as the 
     # end tell
 
 
+## NOTES
+
+Applescript files take one of the following extensions: `.scpt`, `.scptd`, `.applescript`.
+
 ## SEE
 
     osascript(1)

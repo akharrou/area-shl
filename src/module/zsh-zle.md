@@ -6,6 +6,11 @@ tags: [zsh,zshell,shell,extension,module,]
 
 # `zsh/zle`
 
+## BRIEF
+
+- `bindkey`
+- `vared`
+
 ## INSTALLATION
 
 
@@ -20,15 +25,15 @@ tags: [zsh,zshell,shell,extension,module,]
 ----
 #### To create a `zsh` widget:
 
-    function widget-FUNCTION() {
+    function widget::FUNCTION() {
         .
         .
         .
         local ret=$?
         return $ret
     }
-    zle -N widget-FUNCTION
-    bindkey "KEY" widget-FUNCTION
+    zle -N widget::FUNCTION
+    bindkey "KEY" widget::FUNCTION
 
 
 ## INIT

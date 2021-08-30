@@ -51,7 +51,7 @@ tags: [compute,get,print,check,sha1,sha2,sha224,sha256,sha384,sha512,160,224,256
 
 ```bash
 #ℹ︎ generate/compute/produce get/print/display sha2 file hash digest
-❯ sha2 -q -256 FILE
+❯ sha2 -q -256 <FILE>
 ```
 
     9b76ed8131af63dceae1a065f4f9d993b641f2e58282f747e0f6ad67b121e297
@@ -59,7 +59,7 @@ tags: [compute,get,print,check,sha1,sha2,sha224,sha256,sha384,sha512,160,224,256
 
 ```bash
 #ℹ︎ generate/compute/produce get/print/display sha2 file hash digest
-❯ sha2 -ALL FILE
+❯ sha2 -ALL <FILE>
 ```
 
     SHA-256 (FILE) = 9b76ed8131af63dceae1a065f4f9d993b641f2e58282f747e0f6ad67b121e297

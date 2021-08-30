@@ -47,7 +47,7 @@ tags: [encrypt,decrypt,checksum,sign,cryptographic,signatures,files]
 
 ```bash
 #ℹ︎ get/print/display/return/compute sha256 digest/hash of file
-❯ openssl sha224 FILE
+❯ openssl sha224 <FILE>
 ```
 
     SHA224(FILE)= 75efd2a4a9e3b000642e38fa6ae9d2d718c91f776269414f29d70083

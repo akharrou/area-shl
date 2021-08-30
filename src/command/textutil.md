@@ -23,7 +23,7 @@ tags: [manipulate,text,files,formats,doc,html,rtf]
 
 ```bash
 #ℹ︎ convert text file formats
-❯ textutil -convert html FILE.rtf
+❯ textutil -convert html <FILE>.rtf
 ```
 
 
@@ -32,10 +32,10 @@ tags: [manipulate,text,files,formats,doc,html,rtf]
 
 ```bash
 #ℹ︎ get/print/list text file information
-❯ textutil -info FILE.html
+❯ textutil -info <FILE>.html
 ```
 
-    File:  FILE.html
+    File:  <FILE>.html
       Type:  HTML
       Size:  12041 bytes
       Length:  8558 characters
